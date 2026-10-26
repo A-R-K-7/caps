@@ -1,0 +1,26 @@
+{
+  "api_works": true,
+  "model": "openai/gpt-oss-120b",
+  "results": [
+    {
+      "task": "synthetic_v2_configuration_easy_0003_s42",
+      "success": false,
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "task": "synthetic_v2_configuration_easy_0003_s42",
+      "success": false,
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "task": "synthetic_v2_debugging_hard_0002_s42",
+      "success": true,
+      "model": "openai/gpt-oss-120b"
+    },
+    {
+      "task": "synthetic_v2_data_transformation_hard_0008_s42",
+      "success": true,
+      "model": "openai/gpt-oss-120b"
+    }
+  ]
+}

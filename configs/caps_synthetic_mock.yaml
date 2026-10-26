@@ -1,0 +1,54 @@
+# CAPS Synthetic Benchmark — Mock Mode
+# Runs the full pipeline without any API calls.
+# Use this for development, testing, and CI.
+
+name: caps_synthetic_mock
+seed: 42
+seeds: [42]
+temperature: 0.0
+
+models:
+  planner: mock
+  receiver: mock
+  evaluator: mock
+
+policy:
+  algorithm: linucb
+  alpha: 1.0
+  selection_strategy: greedy_budget
+
+budget:
+  max_daily_tokens: 999999
+  max_requests_per_run: 9999
+  max_tokens_per_task: 10000
+  max_tokens_per_message: 4000
+
+reward:
+  lambda_cost: 0.5
+  weights_tokens: 0.4
+  weights_latency: 0.2
+  weights_clarification: 0.2
+  weights_retries: 0.2
+
+evaluator:
+  counterfactual: false
+  max_counterfactuals_per_task: 0
+  judge_enabled: false
+
+dataset:
+  name: synthetic_v1
+  train_size: 30
+  validation_size: 10
+  test_size: 10
+  seed: 42
+
+cache:
+  enabled: false
+
+checkpoint:
+  enabled: false
+
+database_path: data/mock_experiments.db
+results_dir: experiments/results
+embedding_model: all-MiniLM-L6-v2
+verbose: false

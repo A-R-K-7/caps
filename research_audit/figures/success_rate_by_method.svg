@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700">
+<rect width="100%" height="100%" fill="white"/>
+<text x="700.0" y="35" text-anchor="middle" font-family="Arial" font-size="24">Success rate by experiment</text>
+<text x="20" y="350.0" transform="rotate(-90 20 350.0)" font-family="Arial" font-size="16">success rate</text>
+<line x1="80" y1="510" x2="1370" y2="510" stroke="#222"/>
+<line x1="80" y1="70" x2="80" y2="510" stroke="#222"/>
+<rect x="83.0" y="84.0" width="40.1" height="426.0" fill="#3274a1"/>
+<text x="106.0" y="525" transform="rotate(60 106.0 525)" font-family="Arial" font-size="10">CAPS\nark</text>
+<rect x="129.1" y="79.4" width="40.1" height="430.6" fill="#3274a1"/>
+<text x="152.1" y="525" transform="rotate(60 152.1 525)" font-family="Arial" font-size="10">FullContext\nark</text>
+<rect x="175.1" y="70.0" width="40.1" height="440.0" fill="#3274a1"/>
+<text x="198.2" y="525" transform="rotate(60 198.2 525)" font-family="Arial" font-size="10">Heuristic\nark</text>
+<rect x="221.2" y="84.0" width="40.1" height="426.0" fill="#3274a1"/>
+<text x="244.2" y="525" transform="rotate(60 244.2 525)" font-family="Arial" font-size="10">LLMPlanner\nark</text>
+<rect x="267.3" y="77.0" width="40.1" height="433.0" fill="#3274a1"/>
+<text x="290.3" y="525" transform="rotate(60 290.3 525)" font-family="Arial" font-size="10">Random\nark</text>
+<rect x="313.4" y="130.9" width="40.1" height="379.1" fill="#3274a1"/>
+<text x="336.4" y="525" transform="rotate(60 336.4 525)" font-family="Arial" font-size="10">CAPS\nexperiment</text>
+<rect x="359.4" y="294.7" width="40.1" height="215.3" fill="#3274a1"/>
+<text x="382.5" y="525" transform="rotate(60 382.5 525)" font-family="Arial" font-size="10">CAPS</text>
+<rect x="405.5" y="388.3" width="40.1" height="121.7" fill="#3274a1"/>
+<text x="428.5" y="525" transform="rotate(60 428.5 525)" font-family="Arial" font-size="10">CAPS</text>
+<rect x="451.6" y="491.3" width="40.1" height="18.7" fill="#3274a1"/>
+<text x="474.6" y="525" transform="rotate(60 474.6 525)" font-family="Arial" font-size="10">CAPS</text>
+<rect x="497.6" y="510.0" width="40.1" height="0.0" fill="#3274a1"/>
+<text x="520.7" y="525" transform="rotate(60 520.7 525)" font-family="Arial" font-size="10">CAPS</text>
+<rect x="543.7" y="491.3" width="40.1" height="18.7" fill="#3274a1"/>
+<text x="566.8" y="525" transform="rotate(60 566.8 525)" font-family="Arial" font-size="10">CAPS</text>
+<rect x="589.8" y="491.3" width="40.1" height="18.7" fill="#3274a1"/>
+<text x="612.8" y="525" transform="rotate(60 612.8 525)" font-family="Arial" font-size="10">CAPS</text>
+<rect x="635.9" y="491.3" width="40.1" height="18.7" fill="#3274a1"/>
+<text x="658.9" y="525" transform="rotate(60 658.9 525)" font-family="Arial" font-size="10">FullContext</text>
+<rect x="681.9" y="481.9" width="40.1" height="28.1" fill="#3274a1"/>
+<text x="705.0" y="525" transform="rotate(60 705.0 525)" font-family="Arial" font-size="10">Heuristic</text>
+<rect x="728.0" y="276.0" width="40.1" height="234.0" fill="#3274a1"/>
+<text x="751.0" y="525" transform="rotate(60 751.0 525)" font-family="Arial" font-size="10">LLMPlanner</text>
+<rect x="774.1" y="144.9" width="40.1" height="365.1" fill="#3274a1"/>
+<text x="797.1" y="525" transform="rotate(60 797.1 525)" font-family="Arial" font-size="10">Random</text>
+<rect x="820.1" y="453.8" width="40.1" height="56.2" fill="#3274a1"/>
+<text x="843.2" y="525" transform="rotate(60 843.2 525)" font-family="Arial" font-size="10">CAPS</text>
+<rect x="866.2" y="70.0" width="40.1" height="440.0" fill="#3274a1"/>
+<text x="889.2" y="525" transform="rotate(60 889.2 525)" font-family="Arial" font-size="10">FullContext</text>
+<rect x="912.3" y="444.5" width="40.1" height="65.5" fill="#3274a1"/>
+<text x="935.3" y="525" transform="rotate(60 935.3 525)" font-family="Arial" font-size="10">Heuristic</text>
+<rect x="958.4" y="435.1" width="40.1" height="74.9" fill="#3274a1"/>
+<text x="981.4" y="525" transform="rotate(60 981.4 525)" font-family="Arial" font-size="10">LLMPlanner</text>
+<rect x="1004.4" y="276.0" width="40.1" height="234.0" fill="#3274a1"/>
+<text x="1027.5" y="525" transform="rotate(60 1027.5 525)" font-family="Arial" font-size="10">Random</text>
+<rect x="1050.5" y="491.3" width="40.1" height="18.7" fill="#3274a1"/>
+<text x="1073.5" y="525" transform="rotate(60 1073.5 525)" font-family="Arial" font-size="10">CAPS</text>
+<rect x="1096.6" y="500.6" width="40.1" height="9.4" fill="#3274a1"/>
+<text x="1119.6" y="525" transform="rotate(60 1119.6 525)" font-family="Arial" font-size="10">FullContext</text>
+<rect x="1142.6" y="500.6" width="40.1" height="9.4" fill="#3274a1"/>
+<text x="1165.7" y="525" transform="rotate(60 1165.7 525)" font-family="Arial" font-size="10">Heuristic</text>
+<rect x="1188.7" y="481.9" width="40.1" height="28.1" fill="#3274a1"/>
+<text x="1211.8" y="525" transform="rotate(60 1211.8 525)" font-family="Arial" font-size="10">LLMPlanner</text>
+<rect x="1234.8" y="491.3" width="40.1" height="18.7" fill="#3274a1"/>
+<text x="1257.8" y="525" transform="rotate(60 1257.8 525)" font-family="Arial" font-size="10">Random</text>
+<rect x="1280.9" y="508.4" width="40.1" height="1.6" fill="#3274a1"/>
+<text x="1303.9" y="525" transform="rotate(60 1303.9 525)" font-family="Arial" font-size="10">CAPS</text>
+<rect x="1326.9" y="437.8" width="40.1" height="72.2" fill="#3274a1"/>
+<text x="1350.0" y="525" transform="rotate(60 1350.0 525)" font-family="Arial" font-size="10">LLMPlanner</text>
+</svg>

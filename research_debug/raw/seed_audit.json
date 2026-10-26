@@ -1,0 +1,89 @@
+{
+  "random_varies_across_seeds": true,
+  "caps_varies_across_seeds": false,
+  "caps_seed_independence_noted": true,
+  "explanation": {
+    "Random": "Varies by seed \u2014 correct (seed drives episode-level random choice)",
+    "CAPS": "Identical across seeds \u2014 expected (seeds not yet wired into LinUCB init)"
+  },
+  "results": {
+    "random_seed_1": {
+      "selected_ids": [
+        "seed_c05",
+        "seed_c03",
+        "seed_c04",
+        "seed_c01"
+      ],
+      "scores": {
+        "seed_c00": 0.1344,
+        "seed_c01": 0.1344,
+        "seed_c02": 0.1344,
+        "seed_c03": 0.1344,
+        "seed_c04": 0.1344,
+        "seed_c05": 0.1344,
+        "seed_c06": 0.1344,
+        "seed_c07": 0.1344
+      }
+    },
+    "random_seed_2": {
+      "selected_ids": [
+        "seed_c00",
+        "seed_c05",
+        "seed_c07",
+        "seed_c02"
+      ],
+      "scores": {
+        "seed_c00": 0.956,
+        "seed_c01": 0.956,
+        "seed_c02": 0.956,
+        "seed_c03": 0.956,
+        "seed_c04": 0.956,
+        "seed_c05": 0.956,
+        "seed_c06": 0.956,
+        "seed_c07": 0.956
+      }
+    },
+    "random_seed_3": {
+      "selected_ids": [
+        "seed_c01",
+        "seed_c06",
+        "seed_c05",
+        "seed_c04"
+      ],
+      "scores": {
+        "seed_c00": 0.238,
+        "seed_c01": 0.238,
+        "seed_c02": 0.238,
+        "seed_c03": 0.238,
+        "seed_c04": 0.238,
+        "seed_c05": 0.238,
+        "seed_c06": 0.238,
+        "seed_c07": 0.238
+      }
+    },
+    "caps_seed_1": {
+      "selected_ids": [
+        "seed_c03",
+        "seed_c02",
+        "seed_c01",
+        "seed_c00"
+      ]
+    },
+    "caps_seed_2": {
+      "selected_ids": [
+        "seed_c03",
+        "seed_c02",
+        "seed_c01",
+        "seed_c00"
+      ]
+    },
+    "caps_seed_3": {
+      "selected_ids": [
+        "seed_c03",
+        "seed_c02",
+        "seed_c01",
+        "seed_c00"
+      ]
+    }
+  }
+}

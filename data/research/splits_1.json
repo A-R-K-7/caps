@@ -1,0 +1,49 @@
+{
+  "benchmark_version": "synthetic_v2",
+  "dataset_hash": "975448f14628ecb90f3fcf171c92ceb3fcffe7bf9b56c856e8bf4f6f9ce6a272",
+  "generator_version": "synthetic_v2.0",
+  "seed": 1,
+  "splits": {
+    "test": [
+      "synthetic_v2_code_repair_easy_0009_s1",
+      "synthetic_v2_data_transformation_easy_0006_s1",
+      "synthetic_v2_code_repair_medium_0031_s1",
+      "synthetic_v2_multi_hop_reasoning_hard_0017_s1",
+      "synthetic_v2_documentation_lookup_medium_0034_s1",
+      "synthetic_v2_contradiction_resolution_medium_0019_s1",
+      "synthetic_v2_code_repair_hard_0032_s1"
+    ],
+    "train": [
+      "synthetic_v2_configuration_medium_0004_s1",
+      "synthetic_v2_data_transformation_easy_0027_s1",
+      "synthetic_v2_debugging_hard_0002_s1",
+      "synthetic_v2_configuration_easy_0024_s1",
+      "synthetic_v2_documentation_lookup_medium_0013_s1",
+      "synthetic_v2_contradiction_resolution_hard_0020_s1",
+      "synthetic_v2_configuration_easy_0003_s1",
+      "synthetic_v2_data_transformation_medium_0028_s1",
+      "synthetic_v2_multi_hop_reasoning_medium_0016_s1",
+      "synthetic_v2_code_repair_hard_0011_s1",
+      "synthetic_v2_contradiction_resolution_easy_0018_s1",
+      "synthetic_v2_debugging_easy_0021_s1",
+      "synthetic_v2_configuration_hard_0026_s1",
+      "synthetic_v2_debugging_medium_0022_s1",
+      "synthetic_v2_code_repair_medium_0010_s1",
+      "synthetic_v2_data_transformation_medium_0007_s1",
+      "synthetic_v2_data_transformation_hard_0008_s1",
+      "synthetic_v2_documentation_lookup_hard_0014_s1",
+      "synthetic_v2_debugging_easy_0000_s1",
+      "synthetic_v2_debugging_medium_0001_s1",
+      "synthetic_v2_documentation_lookup_easy_0012_s1"
+    ],
+    "validation": [
+      "synthetic_v2_documentation_lookup_easy_0033_s1",
+      "synthetic_v2_code_repair_easy_0030_s1",
+      "synthetic_v2_data_transformation_hard_0029_s1",
+      "synthetic_v2_debugging_hard_0023_s1",
+      "synthetic_v2_configuration_hard_0005_s1",
+      "synthetic_v2_configuration_medium_0025_s1",
+      "synthetic_v2_multi_hop_reasoning_easy_0015_s1"
+    ]
+  }
+}

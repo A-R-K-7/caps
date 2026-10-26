@@ -1,0 +1,43 @@
+# CAPS SWE-Bench Benchmark — Groq Live
+# Runs CAPS on a subset of SWE-Bench Lite tasks.
+
+name: caps_swe_bench_v3
+seed: 42
+seeds: [42]
+temperature: 0.0
+
+models:
+  planner: stealth/ox-alpha
+  receiver: stealth/ox-alpha
+  evaluator: stealth/ox-alpha
+
+policy:
+  algorithm: linucb
+  alpha: 0.2
+  selection_strategy: greedy_budget
+  epsilon: 0.1
+
+budget:
+  max_daily_tokens: 450000
+  max_requests_per_run: 500
+  max_tokens_per_task: 20000
+  max_tokens_per_message: 5000
+
+reward:
+  lambda_cost: 0.5
+  weights_tokens: 0.4
+  weights_latency: 0.2
+  weights_clarification: 0.2
+  weights_retries: 0.2
+
+evaluator:
+  counterfactual: false
+  max_counterfactuals_per_task: 3
+  counterfactual_strategy: uncertainty
+
+dataset:
+  name: swe_bench_lite
+  train_size: 0
+  validation_size: 0
+  test_size: 50
+  seed: 42

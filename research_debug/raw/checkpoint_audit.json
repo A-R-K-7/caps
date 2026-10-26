@@ -1,0 +1,23 @@
+[
+  {
+    "file": "research_8179e54a_CAPS_NoVOI_seed1_bfrac0.3_policy.jsonl",
+    "n_checkpoints": 28,
+    "changed": true,
+    "first_arms_count": 6,
+    "last_arms_count": 6
+  },
+  {
+    "file": "research_8179e54a_CAPS_NoVOI_seed1_bfrac0.5_policy.jsonl",
+    "n_checkpoints": 28,
+    "changed": true,
+    "first_arms_count": 6,
+    "last_arms_count": 6
+  },
+  {
+    "file": "research_8179e54a_CAPS_NoVOI_seed1_bfrac1.0_policy.jsonl",
+    "n_checkpoints": 28,
+    "changed": true,
+    "first_arms_count": 6,
+    "last_arms_count": 6
+  }
+]

@@ -1,0 +1,545 @@
+{
+  "FullContext-Unbounded": {
+    "n": 10,
+    "success": 10,
+    "success_rate": 1.0,
+    "rows": [
+      {
+        "task_id": "sanity_01",
+        "task": "What is 2 + 2?",
+        "answer_key": "four",
+        "receiver_answer": "The correct answer is four.",
+        "success": true,
+        "reward": 0.7999994850158691,
+        "selected_ids": [
+          "s01_c00",
+          "s01_c01"
+        ],
+        "num_selected": 2,
+        "num_available": 2,
+        "precision": 0.5,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_02",
+        "task": "What is the capital of France?",
+        "answer_key": "paris",
+        "receiver_answer": "The correct answer is paris.",
+        "success": true,
+        "reward": 0.7999994945526123,
+        "selected_ids": [
+          "s02_c00",
+          "s02_c01"
+        ],
+        "num_selected": 2,
+        "num_available": 2,
+        "precision": 0.5,
+        "recall": 1.0,
+        "misleading_rate": 0.5,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_03",
+        "task": "What database port should the service use?",
+        "answer_key": "port_5432",
+        "receiver_answer": "The correct answer is port_5432.",
+        "success": true,
+        "reward": 0.7999995040893555,
+        "selected_ids": [
+          "s03_c00",
+          "s03_c01",
+          "s03_c02"
+        ],
+        "num_selected": 3,
+        "num_available": 3,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_04",
+        "task": "What retry count does the API allow?",
+        "answer_key": "three_retries",
+        "receiver_answer": "The correct answer is three_retries.",
+        "success": true,
+        "reward": 0.7999995422363281,
+        "selected_ids": [
+          "sanity_04_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_05",
+        "task": "What must be upgraded to fix the connector issue?",
+        "answer_key": "upgrade_connector",
+        "receiver_answer": "The correct answer is upgrade_connector.",
+        "success": true,
+        "reward": 0.7999995485941569,
+        "selected_ids": [
+          "sanity_05_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_06",
+        "task": "Which runbook takes precedence?",
+        "answer_key": "prefer_current_runbook",
+        "receiver_answer": "The correct answer is prefer_current_runbook.",
+        "success": true,
+        "reward": 0.7999995374679565,
+        "selected_ids": [
+          "sanity_06_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_07",
+        "task": "What loop bounds should the function use?",
+        "answer_key": "inclusive_upper_bound",
+        "receiver_answer": "The correct answer is inclusive_upper_bound.",
+        "success": true,
+        "reward": 0.799999540646871,
+        "selected_ids": [
+          "sanity_07_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_08",
+        "task": "How should dates be normalized?",
+        "answer_key": "normalize_iso_dates",
+        "receiver_answer": "The correct answer is normalize_iso_dates.",
+        "success": true,
+        "reward": 0.7999994913736979,
+        "selected_ids": [
+          "sanity_08_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_09",
+        "task": "What guard is needed before parsing?",
+        "answer_key": "parser_guard",
+        "receiver_answer": "The correct answer is parser_guard.",
+        "success": true,
+        "reward": 0.7999995279312133,
+        "selected_ids": [
+          "sanity_09_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_10",
+        "task": "What is the empty answer case?",
+        "answer_key": "no_ciu_selected",
+        "receiver_answer": "The correct answer is no_ciu_selected.",
+        "success": true,
+        "reward": 0.7999994881947835,
+        "selected_ids": [
+          "sanity_10_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      }
+    ]
+  },
+  "Random": {
+    "n": 10,
+    "success": 10,
+    "success_rate": 1.0,
+    "rows": [
+      {
+        "task_id": "sanity_01",
+        "task": "What is 2 + 2?",
+        "answer_key": "four",
+        "receiver_answer": "The correct answer is four.",
+        "success": true,
+        "reward": 0.7999994293848673,
+        "selected_ids": [
+          "s01_c01",
+          "s01_c00"
+        ],
+        "num_selected": 2,
+        "num_available": 2,
+        "precision": 0.5,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_02",
+        "task": "What is the capital of France?",
+        "answer_key": "paris",
+        "receiver_answer": "The correct answer is paris.",
+        "success": true,
+        "reward": 0.7999996169408162,
+        "selected_ids": [
+          "s02_c01",
+          "s02_c00"
+        ],
+        "num_selected": 2,
+        "num_available": 2,
+        "precision": 0.5,
+        "recall": 1.0,
+        "misleading_rate": 0.5,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_03",
+        "task": "What database port should the service use?",
+        "answer_key": "port_5432",
+        "receiver_answer": "The correct answer is port_5432.",
+        "success": true,
+        "reward": 0.7999996137619019,
+        "selected_ids": [
+          "s03_c02",
+          "s03_c01",
+          "s03_c00"
+        ],
+        "num_selected": 3,
+        "num_available": 3,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_04",
+        "task": "What retry count does the API allow?",
+        "answer_key": "three_retries",
+        "receiver_answer": "The correct answer is three_retries.",
+        "success": true,
+        "reward": 0.7999997472763061,
+        "selected_ids": [
+          "sanity_04_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_05",
+        "task": "What must be upgraded to fix the connector issue?",
+        "answer_key": "upgrade_connector",
+        "receiver_answer": "The correct answer is upgrade_connector.",
+        "success": true,
+        "reward": 0.7999997488657633,
+        "selected_ids": [
+          "sanity_05_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_06",
+        "task": "Which runbook takes precedence?",
+        "answer_key": "prefer_current_runbook",
+        "receiver_answer": "The correct answer is prefer_current_runbook.",
+        "success": true,
+        "reward": 0.799999745686849,
+        "selected_ids": [
+          "sanity_06_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_07",
+        "task": "What loop bounds should the function use?",
+        "answer_key": "inclusive_upper_bound",
+        "receiver_answer": "The correct answer is inclusive_upper_bound.",
+        "success": true,
+        "reward": 0.7999997552235921,
+        "selected_ids": [
+          "sanity_07_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_08",
+        "task": "How should dates be normalized?",
+        "answer_key": "normalize_iso_dates",
+        "receiver_answer": "The correct answer is normalize_iso_dates.",
+        "success": true,
+        "reward": 0.7999997599919637,
+        "selected_ids": [
+          "sanity_08_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_09",
+        "task": "What guard is needed before parsing?",
+        "answer_key": "parser_guard",
+        "receiver_answer": "The correct answer is parser_guard.",
+        "success": true,
+        "reward": 0.7999997663497924,
+        "selected_ids": [
+          "sanity_09_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_10",
+        "task": "What is the empty answer case?",
+        "answer_key": "no_ciu_selected",
+        "receiver_answer": "The correct answer is no_ciu_selected.",
+        "success": true,
+        "reward": 0.7999997790654501,
+        "selected_ids": [
+          "sanity_10_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      }
+    ]
+  },
+  "Heuristic": {
+    "n": 10,
+    "success": 10,
+    "success_rate": 1.0,
+    "rows": [
+      {
+        "task_id": "sanity_01",
+        "task": "What is 2 + 2?",
+        "answer_key": "four",
+        "receiver_answer": "The correct answer is four.",
+        "success": true,
+        "reward": 0.7999997631708781,
+        "selected_ids": [
+          "s01_c01",
+          "s01_c00"
+        ],
+        "num_selected": 2,
+        "num_available": 2,
+        "precision": 0.5,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_02",
+        "task": "What is the capital of France?",
+        "answer_key": "paris",
+        "receiver_answer": "The correct answer is paris.",
+        "success": true,
+        "reward": 0.7999997981389364,
+        "selected_ids": [
+          "s02_c01",
+          "s02_c00"
+        ],
+        "num_selected": 2,
+        "num_available": 2,
+        "precision": 0.5,
+        "recall": 1.0,
+        "misleading_rate": 0.5,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_03",
+        "task": "What database port should the service use?",
+        "answer_key": "port_5432",
+        "receiver_answer": "The correct answer is port_5432.",
+        "success": true,
+        "reward": 0.799999836285909,
+        "selected_ids": [
+          "s03_c02",
+          "s03_c01",
+          "s03_c00"
+        ],
+        "num_selected": 3,
+        "num_available": 3,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_04",
+        "task": "What retry count does the API allow?",
+        "answer_key": "three_retries",
+        "receiver_answer": "The correct answer is three_retries.",
+        "success": true,
+        "reward": 0.7999998601277669,
+        "selected_ids": [
+          "sanity_04_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_05",
+        "task": "What must be upgraded to fix the connector issue?",
+        "answer_key": "upgrade_connector",
+        "receiver_answer": "The correct answer is upgrade_connector.",
+        "success": true,
+        "reward": 0.7999998601277669,
+        "selected_ids": [
+          "sanity_05_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_06",
+        "task": "Which runbook takes precedence?",
+        "answer_key": "prefer_current_runbook",
+        "receiver_answer": "The correct answer is prefer_current_runbook.",
+        "success": true,
+        "reward": 0.7999998744328817,
+        "selected_ids": [
+          "sanity_06_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_07",
+        "task": "What loop bounds should the function use?",
+        "answer_key": "inclusive_upper_bound",
+        "receiver_answer": "The correct answer is inclusive_upper_bound.",
+        "success": true,
+        "reward": 0.799999877611796,
+        "selected_ids": [
+          "sanity_07_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_08",
+        "task": "How should dates be normalized?",
+        "answer_key": "normalize_iso_dates",
+        "receiver_answer": "The correct answer is normalize_iso_dates.",
+        "success": true,
+        "reward": 0.7999998728434244,
+        "selected_ids": [
+          "sanity_08_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_09",
+        "task": "What guard is needed before parsing?",
+        "answer_key": "parser_guard",
+        "receiver_answer": "The correct answer is parser_guard.",
+        "success": true,
+        "reward": 0.799999877611796,
+        "selected_ids": [
+          "sanity_09_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      },
+      {
+        "task_id": "sanity_10",
+        "task": "What is the empty answer case?",
+        "answer_key": "no_ciu_selected",
+        "receiver_answer": "The correct answer is no_ciu_selected.",
+        "success": true,
+        "reward": 0.7999998792012533,
+        "selected_ids": [
+          "sanity_10_c00"
+        ],
+        "num_selected": 1,
+        "num_available": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "misleading_rate": 0.0,
+        "compression": 1.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+# CAPS Research Pipeline — Mock Mode (Pilot)
+#
+# Runs the complete research pipeline (train/val/test splits, 7 methods,
+# 3 budget fractions, 3 seeds) without any API calls.
+#
+# Key differences from caps_synthetic_mock.yaml:
+#   - Uses synthetic_v2 dataset (larger, harder benchmark)
+#   - Writes to a separate database / results directory
+#   - Does NOT touch data/caps_experiments.db
+#
+# This config is consumed by: caps research run --config configs/caps_research_mock.yaml
+
+name: caps_research_mock
+seed: 1
+
+# Dataset
+dataset:
+  name: synthetic_v2
+  size: 35          # 21 train / 7 val / 7 test
+  seed: 1
+
+# Methods to evaluate (all 7 by default; reduce for faster pilots)
+methods:
+  - FullContext-Unbounded
+  - FullContext-Budgeted
+  - Random
+  - Heuristic
+  - LLMPlanner
+  - CAPS-NoVOI
+  - CAPS-VOI
+
+# Budget fractions (pilot: 3 fractions; full campaign: add 0.75 and 0.15)
+budget_fractions: [1.0, 0.5, 0.3]
+
+# Seeds (pilot: 3 seeds; full campaign: 5)
+seeds: [1, 2, 3]
+
+# LLM
+models:
+  planner: mock
+  receiver: mock
+  evaluator: mock
+
+# LinUCB hyperparameters
+policy:
+  alpha: 1.0
+  selection_strategy: greedy_budget
+
+# Reward weights
+reward:
+  lambda_cost: 0.5
+  weights_tokens: 0.4
+  weights_latency: 0.2
+  weights_clarification: 0.2
+  weights_retries: 0.2
+
+# Output paths (separate from pilot experiment paths)
+results_dir: research/results
+checkpoint_dir: research/checkpoints
+manifest_dir: research/manifests
+data_dir: data/research
+
+embedding_model: all-MiniLM-L6-v2
+verbose: false

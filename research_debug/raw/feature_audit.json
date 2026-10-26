@@ -1,0 +1,21 @@
+{
+  "feature_dim": 9,
+  "feature_values": [
+    0.1,
+    0.8,
+    0.0,
+    0.025,
+    0.5,
+    0.0,
+    0.0,
+    1.0,
+    1.0
+  ],
+  "feature_is_empty": false,
+  "exploitation_score": 0.0,
+  "exploration_bonus": 1.7031221330251098,
+  "ucb_score": 1.7031221330251098,
+  "ucb_formula_verified": true,
+  "expected_dim_note": "9 features: 3 budget + 5 CIU + 1 similarity",
+  "instrumentation_bug": "research/runner.py build_decision_rows uses placeholder 0.5/0.5 split instead of actual _build_context output. Feature CSV column is always '[]'."
+}

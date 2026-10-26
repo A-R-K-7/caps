@@ -1,0 +1,1 @@
+run_id,experiment_id,episode_id,task_id,method,seed,split,budget_fraction,budget_tokens,policy_frozen,category,difficulty,receiver_role,num_available,num_selected,available_tokens,selected_tokens,compression,api_prompt_tokens,api_completion_tokens,task_success,reward,latency_ms,clarification_turns,precision,recall,misleading_rate,voi_scores_json

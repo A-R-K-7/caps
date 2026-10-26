@@ -1,0 +1,13 @@
+flowchart TD
+    Dataset[Dataset generator / loaded JSONL] --> Environment
+    Environment --> Planner[PlannerAgent.build_state]
+    Planner --> Embedder[LocalEmbeddingProvider]
+    Planner --> Policy[CommunicationPolicy]
+    Policy --> Selector[select_cius]
+    Selector --> Receiver[ReceiverAgent.execute]
+    Receiver --> EnvironmentEval[Environment.evaluate]
+    EnvironmentEval --> Reward[RewardFunction.calculate]
+    Receiver --> Evaluator[EvaluatorAgent VOI]
+    Evaluator --> PolicyUpdate[policy.update]
+    Reward --> PolicyUpdate
+    PolicyUpdate --> Database[ExperimentDB episodes/metrics]

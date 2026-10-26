@@ -1,0 +1,69 @@
+# CAPS Default Configuration
+# All values here serve as safe defaults that can be overridden.
+
+name: caps_ark
+seed: 42
+seeds: [42, 123, 456, 789]
+temperature: 0.0
+
+models:
+  planner: openai/gpt-oss-120b
+  receiver: openai/gpt-oss-120b
+  evaluator: openai/gpt-oss-120b
+
+policy:
+  algorithm: linucb
+  alpha: 1.0
+  selection_strategy: greedy_budget
+  epsilon: 0.1
+
+budget:
+  max_daily_tokens: 450000
+  max_requests_per_run: 500
+  max_tokens_per_task: 10000
+  max_tokens_per_message: 4000
+
+reward:
+  lambda_cost: 0.5
+  weights_tokens: 0.4
+  weights_latency: 0.2
+  weights_clarification: 0.2
+  weights_retries: 0.2
+
+evaluator:
+  counterfactual: false
+  max_counterfactuals_per_task: 3
+  counterfactual_strategy: uncertainty
+  judge_enabled: false
+
+dataset:
+  name: synthetic_v1
+  train_size: 100
+  validation_size: 50
+  test_size: 50
+  seed: 42
+  families:
+    - debugging
+    - configuration
+    - data_transformation
+    - code_repair
+    - documentation
+
+cache:
+  enabled: true
+  llm_cache_path: data/llm_cache.db
+  embedding_cache_path: data/embedding_cache.db
+
+checkpoint:
+  enabled: true
+  every_n_episodes: 10
+  directory: experiments/checkpoints
+
+quota:
+  warning_percent: 20
+  auto_pause: true
+
+database_path: data/experiments.db
+results_dir: experiments/results
+embedding_model: all-MiniLM-L6-v2
+verbose: false

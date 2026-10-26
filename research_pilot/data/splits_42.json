@@ -1,0 +1,24 @@
+{
+  "benchmark_version": "synthetic_v2",
+  "dataset_hash": "e79cf8f3ef670530869ea55ce245069d8576285074ef1716c6e45c71c0b5829d",
+  "generator_version": "synthetic_v2.0",
+  "seed": 42,
+  "splits": {
+    "test": [
+      "synthetic_v2_data_transformation_medium_0007_s42",
+      "synthetic_v2_configuration_easy_0003_s42"
+    ],
+    "train": [
+      "synthetic_v2_configuration_medium_0004_s42",
+      "synthetic_v2_data_transformation_hard_0008_s42",
+      "synthetic_v2_debugging_hard_0002_s42",
+      "synthetic_v2_debugging_easy_0000_s42",
+      "synthetic_v2_data_transformation_easy_0006_s42",
+      "synthetic_v2_code_repair_easy_0009_s42"
+    ],
+    "validation": [
+      "synthetic_v2_debugging_medium_0001_s42",
+      "synthetic_v2_configuration_hard_0005_s42"
+    ]
+  }
+}

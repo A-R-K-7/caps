@@ -1,0 +1,71 @@
+{
+  "answer_key": "parser_guard",
+  "total": 9,
+  "passed": 9,
+  "failed": 0,
+  "cases": [
+    {
+      "input": "The answer is parser_guard.",
+      "expected": true,
+      "got": true,
+      "status": "PASS",
+      "description": "exact keyword in sentence"
+    },
+    {
+      "input": "parser_guard",
+      "expected": true,
+      "got": true,
+      "status": "PASS",
+      "description": "bare keyword"
+    },
+    {
+      "input": "Fix: parser_guard applied.",
+      "expected": true,
+      "got": true,
+      "status": "PASS",
+      "description": "keyword with context"
+    },
+    {
+      "input": "The correct fix requires adding an empty-input guard before parsing.",
+      "expected": true,
+      "got": true,
+      "status": "PASS",
+      "description": "answer_text fragment"
+    },
+    {
+      "input": "mock_value",
+      "expected": false,
+      "got": false,
+      "status": "PASS",
+      "description": "mock_value (mock LLM default)"
+    },
+    {
+      "input": "I do not know the answer.",
+      "expected": false,
+      "got": false,
+      "status": "PASS",
+      "description": "explicit failure"
+    },
+    {
+      "input": "The answer is 42.",
+      "expected": false,
+      "got": false,
+      "status": "PASS",
+      "description": "wrong number answer"
+    },
+    {
+      "input": "",
+      "expected": false,
+      "got": false,
+      "status": "PASS",
+      "description": "empty string"
+    },
+    {
+      "input": "parser",
+      "expected": false,
+      "got": false,
+      "status": "PASS",
+      "description": "partial keyword \u2014 should fail unless word boundary matches"
+    }
+  ]
+}

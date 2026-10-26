@@ -1,0 +1,93 @@
+{
+  "run_id": "research_1df578e6",
+  "dataset_size": 10,
+  "dataset_seed": 42,
+  "dataset_hash": "e79cf8f3ef670530869ea55ce245069d8576285074ef1716c6e45c71c0b5829d",
+  "splits_path": "research_pilot/data/splits_42.json",
+  "methods": [
+    "FullContext-Unbounded"
+  ],
+  "seeds": [
+    1
+  ],
+  "budget_fractions": [
+    1.0,
+    0.5
+  ],
+  "results": {
+    "FullContext-Unbounded_bfrac1.0_seed1": {
+      "test_success_rate": 0.0,
+      "test_mean_tokens": 1566.5,
+      "test_mean_reward": -0.16047471830434168,
+      "test_mean_precision": 0.42857142857142855,
+      "test_mean_recall": 1.0,
+      "test_mean_misleading_rate": 0.14285714285714285,
+      "splits": {
+        "train": {
+          "n": 6,
+          "success_rate": 0.0,
+          "mean_tokens": 2394.0,
+          "mean_reward": -0.1624686862063111,
+          "mean_precision": 0.42857142857142855,
+          "mean_recall": 1.0,
+          "mean_misleading_rate": 0.14285714285714285
+        },
+        "validation": {
+          "n": 2,
+          "success_rate": 0.0,
+          "mean_tokens": 3611.0,
+          "mean_reward": -0.2272241680592833,
+          "mean_precision": 0.42857142857142855,
+          "mean_recall": 1.0,
+          "mean_misleading_rate": 0.14285714285714285
+        },
+        "test": {
+          "n": 2,
+          "success_rate": 0.0,
+          "mean_tokens": 1566.5,
+          "mean_reward": -0.16047471830434168,
+          "mean_precision": 0.42857142857142855,
+          "mean_recall": 1.0,
+          "mean_misleading_rate": 0.14285714285714285
+        }
+      }
+    },
+    "FullContext-Unbounded_bfrac0.5_seed1": {
+      "test_success_rate": 0.0,
+      "test_mean_tokens": 1566.5,
+      "test_mean_reward": -0.20306049396151957,
+      "test_mean_precision": 0.42857142857142855,
+      "test_mean_recall": 1.0,
+      "test_mean_misleading_rate": 0.14285714285714285,
+      "splits": {
+        "train": {
+          "n": 6,
+          "success_rate": 0.0,
+          "mean_tokens": 2394.0,
+          "mean_reward": -0.1979060371126938,
+          "mean_precision": 0.42857142857142855,
+          "mean_recall": 1.0,
+          "mean_misleading_rate": 0.14285714285714285
+        },
+        "validation": {
+          "n": 2,
+          "success_rate": 0.0,
+          "mean_tokens": 3611.0,
+          "mean_reward": -0.23377937873204552,
+          "mean_precision": 0.42857142857142855,
+          "mean_recall": 1.0,
+          "mean_misleading_rate": 0.14285714285714285
+        },
+        "test": {
+          "n": 2,
+          "success_rate": 0.0,
+          "mean_tokens": 1566.5,
+          "mean_reward": -0.20306049396151957,
+          "mean_precision": 0.42857142857142855,
+          "mean_recall": 1.0,
+          "mean_misleading_rate": 0.14285714285714285
+        }
+      }
+    }
+  }
+}

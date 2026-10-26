@@ -1,0 +1,739 @@
+{
+  "files": [
+    {
+      "path": ".env",
+      "purpose": "Environment configuration; secret values intentionally not inspected/exported",
+      "research_relevance": "medium",
+      "size": 868,
+      "type": "unknown"
+    },
+    {
+      "path": ".env.example",
+      "purpose": "Environment configuration; secret values intentionally not inspected/exported",
+      "research_relevance": "medium",
+      "size": 227,
+      "type": "example"
+    },
+    {
+      "path": ".gitignore",
+      "purpose": "Other artifact",
+      "research_relevance": "medium",
+      "size": 395,
+      "type": "unknown"
+    },
+    {
+      "path": "README.md",
+      "purpose": "Documentation/report/log text",
+      "research_relevance": "high",
+      "size": 137,
+      "type": "md"
+    },
+    {
+      "path": "architecture_decisions.md",
+      "purpose": "Documentation/report/log text",
+      "research_relevance": "high",
+      "size": 4211,
+      "type": "md"
+    },
+    {
+      "path": "caps_experiments.db",
+      "purpose": "SQLite database artifact",
+      "research_relevance": "medium",
+      "size": 32768,
+      "type": "db"
+    },
+    {
+      "path": "caps_old/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 26,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/benchmark/env.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 978,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/benchmark/swe_bench.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 2263,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/ciu/embedder.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 824,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/ciu/models.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 473,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/engine/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 0,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/engine/env.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 2334,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/evaluator/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 0,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/evaluator/attribution.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 2788,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/evaluator/oracle.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 4223,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/evaluator/reward.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 1457,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/experiments/ablation.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 2106,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/experiments/generalization.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 2577,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/experiments/report.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 5029,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/experiments/runner.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 7141,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/experiments/statistics.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 3790,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/planner/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 0,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/planner/agent.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 3009,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/policy/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 0,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/policy/bandit.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 6460,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/policy/baselines.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 6102,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/policy/models.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 626,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/policy/reflection.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 2847,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/receiver/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 0,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/receiver/agent.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 3341,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/storage/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 0,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/storage/db.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 2513,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/storage/tracker.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 739,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/utils/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 0,
+      "type": "py"
+    },
+    {
+      "path": "caps_old/utils/llm.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 6188,
+      "type": "py"
+    },
+    {
+      "path": "configs/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 29,
+      "type": "py"
+    },
+    {
+      "path": "configs/caps_swe_bench.yaml",
+      "purpose": "Configuration/dependency metadata",
+      "research_relevance": "high",
+      "size": 797,
+      "type": "yaml"
+    },
+    {
+      "path": "configs/caps_swe_bench_full.yaml",
+      "purpose": "Configuration/dependency metadata",
+      "research_relevance": "high",
+      "size": 834,
+      "type": "yaml"
+    },
+    {
+      "path": "configs/caps_synthetic.yaml",
+      "purpose": "Configuration/dependency metadata",
+      "research_relevance": "high",
+      "size": 826,
+      "type": "yaml"
+    },
+    {
+      "path": "configs/caps_synthetic_mock.yaml",
+      "purpose": "Configuration/dependency metadata",
+      "research_relevance": "high",
+      "size": 955,
+      "type": "yaml"
+    },
+    {
+      "path": "configs/default.yaml",
+      "purpose": "Configuration/dependency metadata",
+      "research_relevance": "high",
+      "size": 1316,
+      "type": "yaml"
+    },
+    {
+      "path": "configs/settings.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 671,
+      "type": "py"
+    },
+    {
+      "path": "creds.env",
+      "purpose": "Environment configuration; secret values intentionally not inspected/exported",
+      "research_relevance": "medium",
+      "size": 143,
+      "type": "env"
+    },
+    {
+      "path": "data/embedding_cache.db",
+      "purpose": "SQLite database artifact",
+      "research_relevance": "high",
+      "size": 8642560,
+      "type": "db"
+    },
+    {
+      "path": "data/experiments.db",
+      "purpose": "SQLite database artifact",
+      "research_relevance": "high",
+      "size": 1880064,
+      "type": "db"
+    },
+    {
+      "path": "data/experiments_archive.db",
+      "purpose": "SQLite database artifact",
+      "research_relevance": "high",
+      "size": 737280,
+      "type": "db"
+    },
+    {
+      "path": "data/llm_cache.db",
+      "purpose": "SQLite database artifact",
+      "research_relevance": "high",
+      "size": 0,
+      "type": "db"
+    },
+    {
+      "path": "data/mock_experiments.db",
+      "purpose": "SQLite database artifact",
+      "research_relevance": "high",
+      "size": 200704,
+      "type": "db"
+    },
+    {
+      "path": "data/synthetic/my_benchmark.jsonl",
+      "purpose": "Dataset artifact",
+      "research_relevance": "high",
+      "size": 152862,
+      "type": "jsonl"
+    },
+    {
+      "path": "data/synthetic/swe_bench_lite.jsonl",
+      "purpose": "Dataset artifact",
+      "research_relevance": "high",
+      "size": 3101004,
+      "type": "jsonl"
+    },
+    {
+      "path": "data/synthetic/synthetic_v1.jsonl",
+      "purpose": "Dataset artifact",
+      "research_relevance": "high",
+      "size": 305567,
+      "type": "jsonl"
+    },
+    {
+      "path": "experiments/results/summary.csv",
+      "purpose": "Tabular results export",
+      "research_relevance": "high",
+      "size": 348,
+      "type": "csv"
+    },
+    {
+      "path": "experiments/results/summary.md",
+      "purpose": "Documentation/report/log text",
+      "research_relevance": "high",
+      "size": 1041,
+      "type": "md"
+    },
+    {
+      "path": "llm_cache.db",
+      "purpose": "SQLite database artifact",
+      "research_relevance": "medium",
+      "size": 65536,
+      "type": "db"
+    },
+    {
+      "path": "mlflow.db",
+      "purpose": "SQLite database artifact",
+      "research_relevance": "medium",
+      "size": 872448,
+      "type": "db"
+    },
+    {
+      "path": "pip_install.log",
+      "purpose": "Other artifact",
+      "research_relevance": "medium",
+      "size": 13430,
+      "type": "log"
+    },
+    {
+      "path": "plan.md",
+      "purpose": "Documentation/report/log text",
+      "research_relevance": "high",
+      "size": 8438,
+      "type": "md"
+    },
+    {
+      "path": "pyproject.toml",
+      "purpose": "Configuration/dependency metadata",
+      "research_relevance": "high",
+      "size": 980,
+      "type": "toml"
+    },
+    {
+      "path": "research_audit_generator.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 57621,
+      "type": "py"
+    },
+    {
+      "path": "results.db",
+      "purpose": "SQLite database artifact",
+      "research_relevance": "medium",
+      "size": 0,
+      "type": "db"
+    },
+    {
+      "path": "src/caps/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 178,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/agents/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 54,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/agents/evaluator.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 4299,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/agents/planner.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 4470,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/agents/receiver.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 5027,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/bandits/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 30,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/bandits/linucb.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 8586,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/cli.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 16382,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/communication/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 65,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/communication/baselines.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 6555,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/communication/ciu.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 1820,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/communication/policy.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 1357,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/communication/selector.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 3676,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/communication/state.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 1794,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/config.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 8703,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/datasets/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 79,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/datasets/generator.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 22368,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/datasets/swe_bench.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 3973,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/embeddings/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 636,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/embeddings/local.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 4832,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/environments/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 61,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/environments/swe_bench.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 2287,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/environments/synthetic.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 3944,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/evaluation/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 66,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/evaluation/analysis.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 3721,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/evaluation/metrics.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 4227,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/evaluation/plotting.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 4304,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/evaluation/reward.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 3688,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/experiments/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 54,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/experiments/runner.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 14247,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/llm/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 3936,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/llm/budget.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 5450,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/llm/cache.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 4897,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/llm/groq_client.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 12776,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/llm/mock_client.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 4744,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/llm/model_registry.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 2104,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/prompts/evaluator_v1.txt",
+      "purpose": "Documentation/report/log text",
+      "research_relevance": "high",
+      "size": 522,
+      "type": "txt"
+    },
+    {
+      "path": "src/caps/prompts/planner_v1.txt",
+      "purpose": "Documentation/report/log text",
+      "research_relevance": "high",
+      "size": 800,
+      "type": "txt"
+    },
+    {
+      "path": "src/caps/prompts/receiver_v1.txt",
+      "purpose": "Documentation/report/log text",
+      "research_relevance": "high",
+      "size": 714,
+      "type": "txt"
+    },
+    {
+      "path": "src/caps/storage/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 53,
+      "type": "py"
+    },
+    {
+      "path": "src/caps/storage/database.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "high",
+      "size": 9731,
+      "type": "py"
+    },
+    {
+      "path": "tests/__init__.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 0,
+      "type": "py"
+    },
+    {
+      "path": "tests/test_core.py",
+      "purpose": "Python source or tests",
+      "research_relevance": "medium",
+      "size": 19550,
+      "type": "py"
+    },
+    {
+      "path": "uv.lock",
+      "purpose": "Other artifact",
+      "research_relevance": "medium",
+      "size": 477759,
+      "type": "lock"
+    }
+  ]
+}

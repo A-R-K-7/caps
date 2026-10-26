@@ -1,0 +1,68 @@
+{
+  "dataset": {
+    "name": "synthetic_v2_final",
+    "size": 500,
+    "train_size": 300,
+    "validation_size": 100,
+    "test_size": 100,
+    "task_counts": {
+      "easy": 100,
+      "medium": 200,
+      "hard": 200
+    },
+    "seed": 42
+  },
+  "methods": [
+    "FullContext-Unbounded",
+    "FullContext-Budgeted",
+    "Random",
+    "Heuristic",
+    "LLMPlanner",
+    "CAPS-NoVOI",
+    "CAPS-VOI",
+    "CAPS-OracleVOI"
+  ],
+  "budgets": [
+    1.0,
+    0.75,
+    0.5,
+    0.3,
+    0.15
+  ],
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "model": {
+    "provider": "GroqProvider",
+    "name": "qwen/qwen3.6-27b",
+    "temperature": 0.0,
+    "max_tokens": 1000
+  },
+  "policy_hyperparameters": {
+    "linucb_alpha": 1.0,
+    "epsilon": 0.05
+  },
+  "evaluation_metrics": [
+    "success_rate",
+    "mean_tokens",
+    "precision",
+    "recall",
+    "misleading_rate",
+    "reward"
+  ],
+  "statistical_tests": [
+    "paired_t_test",
+    "confidence_intervals_95",
+    "cohens_d_effect_size"
+  ],
+  "logging_configuration": {
+    "results_dir": "experiments/results/final",
+    "checkpoint_dir": "experiments/checkpoints/final",
+    "log_api_usage": true,
+    "log_api_failures": true
+  }
+}

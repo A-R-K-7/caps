@@ -1,0 +1,4010 @@
+{
+  "configs": [
+    {
+      "path": "configs\\caps_swe_bench.yaml",
+      "size": 797
+    },
+    {
+      "path": "configs\\caps_swe_bench_full.yaml",
+      "size": 834
+    },
+    {
+      "path": "configs\\caps_synthetic.yaml",
+      "size": 826
+    },
+    {
+      "path": "configs\\caps_synthetic_mock.yaml",
+      "size": 955
+    },
+    {
+      "path": "configs\\default.yaml",
+      "size": 1316
+    }
+  ],
+  "datasets": [
+    {
+      "categories": {
+        "code_repair": 20,
+        "configuration": 20,
+        "data_transformation": 20,
+        "debugging": 20,
+        "documentation": 20
+      },
+      "path": "data\\synthetic\\my_benchmark.jsonl",
+      "tasks": 100
+    },
+    {
+      "categories": {
+        "software_engineering": 300
+      },
+      "path": "data\\synthetic\\swe_bench_lite.jsonl",
+      "tasks": 300
+    },
+    {
+      "categories": {
+        "code_repair": 40,
+        "configuration": 40,
+        "data_transformation": 40,
+        "debugging": 40,
+        "documentation": 40
+      },
+      "path": "data\\synthetic\\synthetic_v1.jsonl",
+      "tasks": 200
+    }
+  ],
+  "experiments": [
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v1\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-20b\", \"receiver\": \"openai/gpt-oss-20b\", \"evaluator\": \"openai/gpt-oss-20b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": true, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": true}",
+      "created_at": "2026-08-18 05:27:32",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 1,
+      "name": "caps_swe_bench_v1 / FullContext",
+      "planner_model": "openai/gpt-oss-20b",
+      "policy_name": "FullContext",
+      "receiver_model": "openai/gpt-oss-20b",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-21 10:26:28"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v1\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-20b\", \"receiver\": \"openai/gpt-oss-20b\", \"evaluator\": \"openai/gpt-oss-20b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": true, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": true}",
+      "created_at": "2026-08-18 05:45:34",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 2,
+      "name": "caps_swe_bench_v1 / Random",
+      "planner_model": "openai/gpt-oss-20b",
+      "policy_name": "Random",
+      "receiver_model": "openai/gpt-oss-20b",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-21 10:26:28"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v1\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-20b\", \"receiver\": \"openai/gpt-oss-20b\", \"evaluator\": \"openai/gpt-oss-20b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": true, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": true}",
+      "created_at": "2026-08-18 06:57:42",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 3,
+      "name": "caps_swe_bench_v1 / Heuristic",
+      "planner_model": "openai/gpt-oss-20b",
+      "policy_name": "Heuristic",
+      "receiver_model": "openai/gpt-oss-20b",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-21 10:26:28"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v1\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-20b\", \"receiver\": \"openai/gpt-oss-20b\", \"evaluator\": \"openai/gpt-oss-20b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": true, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": true}",
+      "created_at": "2026-08-18 07:26:26",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 4,
+      "name": "caps_swe_bench_v1 / LLMPlanner",
+      "planner_model": "openai/gpt-oss-20b",
+      "policy_name": "LLMPlanner",
+      "receiver_model": "openai/gpt-oss-20b",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-21 10:26:28"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v1\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-20b\", \"receiver\": \"openai/gpt-oss-20b\", \"evaluator\": \"openai/gpt-oss-20b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": true, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": true}",
+      "created_at": "2026-08-21 11:44:32",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v1_CAPS_42",
+      "id": 5,
+      "name": "caps_swe_bench_v1 / CAPS",
+      "planner_model": "openai/gpt-oss-20b",
+      "policy_name": "CAPS",
+      "receiver_model": "openai/gpt-oss-20b",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-22 08:33:54"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v1\", \"seed\": 43, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-20b\", \"receiver\": \"openai/gpt-oss-20b\", \"evaluator\": \"openai/gpt-oss-20b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-22 11:39:22",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v1_CAPS_43",
+      "id": 6,
+      "name": "caps_swe_bench_v1 / CAPS",
+      "planner_model": "openai/gpt-oss-20b",
+      "policy_name": "CAPS",
+      "receiver_model": "openai/gpt-oss-20b",
+      "seed": 43,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-22 13:18:39"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v1\", \"seed\": 44, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-20b\", \"receiver\": \"openai/gpt-oss-20b\", \"evaluator\": \"openai/gpt-oss-20b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-22 14:12:06",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v1_CAPS_44",
+      "id": 7,
+      "name": "caps_swe_bench_v1 / CAPS",
+      "planner_model": "openai/gpt-oss-20b",
+      "policy_name": "CAPS",
+      "receiver_model": "openai/gpt-oss-20b",
+      "seed": 44,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-22 14:40:00"
+    },
+    {
+      "completed_episodes": 0,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v1\", \"seed\": 45, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-20b\", \"receiver\": \"openai/gpt-oss-20b\", \"evaluator\": \"openai/gpt-oss-20b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-22 14:40:11",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v1_CAPS_45",
+      "id": 8,
+      "name": "caps_swe_bench_v1 / CAPS",
+      "planner_model": "openai/gpt-oss-20b",
+      "policy_name": "CAPS",
+      "receiver_model": "openai/gpt-oss-20b",
+      "seed": 45,
+      "status": "running",
+      "total_episodes": 50,
+      "updated_at": "2026-08-22 14:40:11"
+    },
+    {
+      "completed_episodes": 0,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v1\", \"seed\": 46, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-20b\", \"receiver\": \"openai/gpt-oss-20b\", \"evaluator\": \"openai/gpt-oss-20b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 0.2, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-22 14:46:07",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v1_CAPS_46",
+      "id": 9,
+      "name": "caps_swe_bench_v1 / CAPS",
+      "planner_model": "openai/gpt-oss-20b",
+      "policy_name": "CAPS",
+      "receiver_model": "openai/gpt-oss-20b",
+      "seed": 46,
+      "status": "running",
+      "total_episodes": 50,
+      "updated_at": "2026-08-22 14:46:07"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v1\", \"seed\": 47, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-20b\", \"receiver\": \"openai/gpt-oss-20b\", \"evaluator\": \"openai/gpt-oss-20b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 0.2, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-22 15:01:17",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v1_CAPS_47",
+      "id": 10,
+      "name": "caps_swe_bench_v1 / CAPS",
+      "planner_model": "openai/gpt-oss-20b",
+      "policy_name": "CAPS",
+      "receiver_model": "openai/gpt-oss-20b",
+      "seed": 47,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-22 15:22:44"
+    },
+    {
+      "completed_episodes": 200,
+      "config_yaml": "{\"name\": \"caps_experiment\", \"seed\": 42, \"seeds\": [42, 123, 456, 789], \"temperature\": 0.0, \"models\": {\"planner\": \"llama-3.3-70b-versatile\", \"receiver\": \"llama-3.3-70b-versatile\", \"evaluator\": \"llama-3.3-70b-versatile\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 10000, \"max_tokens_per_message\": 4000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"synthetic_v1\", \"train_size\": 100, \"validation_size\": 50, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-23 04:31:35",
+      "dataset_name": "synthetic_v1",
+      "evaluator_model": null,
+      "experiment_id": "caps_experiment_CAPS_42",
+      "id": 11,
+      "name": "caps_experiment / CAPS",
+      "planner_model": "llama-3.3-70b-versatile",
+      "policy_name": "CAPS",
+      "receiver_model": "llama-3.3-70b-versatile",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 200,
+      "updated_at": "2026-08-23 05:08:14"
+    },
+    {
+      "completed_episodes": 200,
+      "config_yaml": "{\"name\": \"caps_ark\", \"seed\": 42, \"seeds\": [42, 123, 456, 789], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-120b\", \"receiver\": \"openai/gpt-oss-120b\", \"evaluator\": \"openai/gpt-oss-120b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 10000, \"max_tokens_per_message\": 4000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"synthetic_v1\", \"train_size\": 100, \"validation_size\": 50, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-23 05:09:03",
+      "dataset_name": "synthetic_v1",
+      "evaluator_model": null,
+      "experiment_id": "caps_ark_CAPS_42",
+      "id": 12,
+      "name": "caps_ark / CAPS",
+      "planner_model": "openai/gpt-oss-120b",
+      "policy_name": "CAPS",
+      "receiver_model": "openai/gpt-oss-120b",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 200,
+      "updated_at": "2026-08-23 06:10:49"
+    },
+    {
+      "completed_episodes": 200,
+      "config_yaml": "{\"name\": \"caps_ark\", \"seed\": 42, \"seeds\": [42, 123, 456, 789], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-120b\", \"receiver\": \"openai/gpt-oss-120b\", \"evaluator\": \"openai/gpt-oss-120b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 10000, \"max_tokens_per_message\": 4000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"synthetic_v1\", \"train_size\": 100, \"validation_size\": 50, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-23 06:10:49",
+      "dataset_name": "synthetic_v1",
+      "evaluator_model": null,
+      "experiment_id": "caps_ark_LLMPlanner_42",
+      "id": 13,
+      "name": "caps_ark / LLMPlanner",
+      "planner_model": "openai/gpt-oss-120b",
+      "policy_name": "LLMPlanner",
+      "receiver_model": "openai/gpt-oss-120b",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 200,
+      "updated_at": "2026-08-23 07:05:21"
+    },
+    {
+      "completed_episodes": 200,
+      "config_yaml": "{\"name\": \"caps_ark\", \"seed\": 42, \"seeds\": [42, 123, 456, 789], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-120b\", \"receiver\": \"openai/gpt-oss-120b\", \"evaluator\": \"openai/gpt-oss-120b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 10000, \"max_tokens_per_message\": 4000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"synthetic_v1\", \"train_size\": 100, \"validation_size\": 50, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-23 07:05:21",
+      "dataset_name": "synthetic_v1",
+      "evaluator_model": null,
+      "experiment_id": "caps_ark_Heuristic_42",
+      "id": 14,
+      "name": "caps_ark / Heuristic",
+      "planner_model": "openai/gpt-oss-120b",
+      "policy_name": "Heuristic",
+      "receiver_model": "openai/gpt-oss-120b",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 200,
+      "updated_at": "2026-08-23 07:30:45"
+    },
+    {
+      "completed_episodes": 200,
+      "config_yaml": "{\"name\": \"caps_ark\", \"seed\": 42, \"seeds\": [42, 123, 456, 789], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-120b\", \"receiver\": \"openai/gpt-oss-120b\", \"evaluator\": \"openai/gpt-oss-120b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 10000, \"max_tokens_per_message\": 4000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"synthetic_v1\", \"train_size\": 100, \"validation_size\": 50, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-23 07:30:45",
+      "dataset_name": "synthetic_v1",
+      "evaluator_model": null,
+      "experiment_id": "caps_ark_Random_42",
+      "id": 15,
+      "name": "caps_ark / Random",
+      "planner_model": "openai/gpt-oss-120b",
+      "policy_name": "Random",
+      "receiver_model": "openai/gpt-oss-120b",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 200,
+      "updated_at": "2026-08-23 07:56:18"
+    },
+    {
+      "completed_episodes": 200,
+      "config_yaml": "{\"name\": \"caps_ark\", \"seed\": 42, \"seeds\": [42, 123, 456, 789], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-120b\", \"receiver\": \"openai/gpt-oss-120b\", \"evaluator\": \"openai/gpt-oss-120b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 10000, \"max_tokens_per_message\": 4000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"synthetic_v1\", \"train_size\": 100, \"validation_size\": 50, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-23 07:56:18",
+      "dataset_name": "synthetic_v1",
+      "evaluator_model": null,
+      "experiment_id": "caps_ark_FullContext_42",
+      "id": 16,
+      "name": "caps_ark / FullContext",
+      "planner_model": "openai/gpt-oss-120b",
+      "policy_name": "FullContext",
+      "receiver_model": "openai/gpt-oss-120b",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 200,
+      "updated_at": "2026-08-23 08:21:33"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v2\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-120b\", \"receiver\": \"openai/gpt-oss-120b\", \"evaluator\": \"openai/gpt-oss-120b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 0.2, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-23 11:03:51",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v2_CAPS_42",
+      "id": 17,
+      "name": "caps_swe_bench_v2 / CAPS",
+      "planner_model": "openai/gpt-oss-120b",
+      "policy_name": "CAPS",
+      "receiver_model": "openai/gpt-oss-120b",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-23 11:32:59"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v2\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-120b\", \"receiver\": \"openai/gpt-oss-120b\", \"evaluator\": \"openai/gpt-oss-120b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 0.2, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-23 11:32:59",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v2_LLMPlanner_42",
+      "id": 18,
+      "name": "caps_swe_bench_v2 / LLMPlanner",
+      "planner_model": "openai/gpt-oss-120b",
+      "policy_name": "LLMPlanner",
+      "receiver_model": "openai/gpt-oss-120b",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-23 13:28:38"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v2\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-120b\", \"receiver\": \"openai/gpt-oss-120b\", \"evaluator\": \"openai/gpt-oss-120b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 0.2, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-23 13:28:38",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v2_Heuristic_42",
+      "id": 19,
+      "name": "caps_swe_bench_v2 / Heuristic",
+      "planner_model": "openai/gpt-oss-120b",
+      "policy_name": "Heuristic",
+      "receiver_model": "openai/gpt-oss-120b",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-23 14:16:11"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v2\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-120b\", \"receiver\": \"openai/gpt-oss-120b\", \"evaluator\": \"openai/gpt-oss-120b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 0.2, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-23 14:16:11",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v2_Random_42",
+      "id": 20,
+      "name": "caps_swe_bench_v2 / Random",
+      "planner_model": "openai/gpt-oss-120b",
+      "policy_name": "Random",
+      "receiver_model": "openai/gpt-oss-120b",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-23 15:42:27"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v2\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"openai/gpt-oss-120b\", \"receiver\": \"openai/gpt-oss-120b\", \"evaluator\": \"openai/gpt-oss-120b\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 0.2, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-23 15:42:27",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v2_FullContext_42",
+      "id": 21,
+      "name": "caps_swe_bench_v2 / FullContext",
+      "planner_model": "openai/gpt-oss-120b",
+      "policy_name": "FullContext",
+      "receiver_model": "openai/gpt-oss-120b",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-23 16:11:07"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v3\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"stealth/ox-alpha\", \"receiver\": \"stealth/ox-alpha\", \"evaluator\": \"stealth/ox-alpha\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 0.2, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-24 11:52:11",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v3_CAPS_42",
+      "id": 22,
+      "name": "caps_swe_bench_v3 / CAPS",
+      "planner_model": "stealth/ox-alpha",
+      "policy_name": "CAPS",
+      "receiver_model": "stealth/ox-alpha",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-24 12:42:42"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v3\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"stealth/ox-alpha\", \"receiver\": \"stealth/ox-alpha\", \"evaluator\": \"stealth/ox-alpha\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 0.2, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-24 12:42:42",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v3_LLMPlanner_42",
+      "id": 23,
+      "name": "caps_swe_bench_v3 / LLMPlanner",
+      "planner_model": "stealth/ox-alpha",
+      "policy_name": "LLMPlanner",
+      "receiver_model": "stealth/ox-alpha",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-24 13:45:49"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v3\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"stealth/ox-alpha\", \"receiver\": \"stealth/ox-alpha\", \"evaluator\": \"stealth/ox-alpha\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 0.2, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-24 13:45:49",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v3_Heuristic_42",
+      "id": 24,
+      "name": "caps_swe_bench_v3 / Heuristic",
+      "planner_model": "stealth/ox-alpha",
+      "policy_name": "Heuristic",
+      "receiver_model": "stealth/ox-alpha",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-24 15:01:36"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v3\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"stealth/ox-alpha\", \"receiver\": \"stealth/ox-alpha\", \"evaluator\": \"stealth/ox-alpha\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 0.2, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-24 15:01:36",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v3_Random_42",
+      "id": 25,
+      "name": "caps_swe_bench_v3 / Random",
+      "planner_model": "stealth/ox-alpha",
+      "policy_name": "Random",
+      "receiver_model": "stealth/ox-alpha",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-24 16:13:01"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v3\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"stealth/ox-alpha\", \"receiver\": \"stealth/ox-alpha\", \"evaluator\": \"stealth/ox-alpha\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 0.2, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 450000, \"max_requests_per_run\": 500, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 50, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-24 16:13:01",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v3_FullContext_42",
+      "id": 26,
+      "name": "caps_swe_bench_v3 / FullContext",
+      "planner_model": "stealth/ox-alpha",
+      "policy_name": "FullContext",
+      "receiver_model": "stealth/ox-alpha",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-24 17:08:51"
+    },
+    {
+      "completed_episodes": 300,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v3_full_dataset\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"stealth/ox-alpha\", \"receiver\": \"stealth/ox-alpha\", \"evaluator\": \"stealth/ox-alpha\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 0.2, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 3600000, \"max_requests_per_run\": 5000, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 300, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-26 05:16:51",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v3_full_dataset_CAPS_42",
+      "id": 27,
+      "name": "caps_swe_bench_v3_full_dataset / CAPS",
+      "planner_model": "stealth/ox-alpha",
+      "policy_name": "CAPS",
+      "receiver_model": "stealth/ox-alpha",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 300,
+      "updated_at": "2026-08-26 11:39:05"
+    },
+    {
+      "completed_episodes": 0,
+      "config_yaml": "{\"name\": \"caps_swe_bench_v3_full_dataset\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"stealth/ox-alpha\", \"receiver\": \"stealth/ox-alpha\", \"evaluator\": \"stealth/ox-alpha\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 0.2, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 3600000, \"max_requests_per_run\": 5000, \"max_tokens_per_task\": 20000, \"max_tokens_per_message\": 5000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 3, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"swe_bench_lite\", \"train_size\": 0, \"validation_size\": 0, \"test_size\": 300, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": true, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": true, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": false}",
+      "created_at": "2026-08-26 11:39:05",
+      "dataset_name": "swe_bench_lite",
+      "evaluator_model": null,
+      "experiment_id": "caps_swe_bench_v3_full_dataset_LLMPlanner_42",
+      "id": 28,
+      "name": "caps_swe_bench_v3_full_dataset / LLMPlanner",
+      "planner_model": "stealth/ox-alpha",
+      "policy_name": "LLMPlanner",
+      "receiver_model": "stealth/ox-alpha",
+      "seed": 42,
+      "status": "running",
+      "total_episodes": 300,
+      "updated_at": "2026-08-26 11:39:05"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_synthetic_mock\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"mock\", \"receiver\": \"mock\", \"evaluator\": \"mock\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 999999, \"max_requests_per_run\": 9999, \"max_tokens_per_task\": 10000, \"max_tokens_per_message\": 4000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 0, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"synthetic_v1\", \"train_size\": 30, \"validation_size\": 10, \"test_size\": 10, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": false, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": false, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/mock_experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": true}",
+      "created_at": "2026-08-16 15:17:16",
+      "dataset_name": "synthetic_v1",
+      "evaluator_model": null,
+      "experiment_id": "caps_synthetic_mock_FullContext_42",
+      "id": 9,
+      "name": "caps_synthetic_mock / FullContext",
+      "planner_model": "mock",
+      "policy_name": "FullContext",
+      "receiver_model": "mock",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-16 15:17:30"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_synthetic_mock\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"mock\", \"receiver\": \"mock\", \"evaluator\": \"mock\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 999999, \"max_requests_per_run\": 9999, \"max_tokens_per_task\": 10000, \"max_tokens_per_message\": 4000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 0, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"synthetic_v1\", \"train_size\": 30, \"validation_size\": 10, \"test_size\": 10, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": false, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": false, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/mock_experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": true}",
+      "created_at": "2026-08-16 15:17:30",
+      "dataset_name": "synthetic_v1",
+      "evaluator_model": null,
+      "experiment_id": "caps_synthetic_mock_Random_42",
+      "id": 10,
+      "name": "caps_synthetic_mock / Random",
+      "planner_model": "mock",
+      "policy_name": "Random",
+      "receiver_model": "mock",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-16 15:17:31"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_synthetic_mock\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"mock\", \"receiver\": \"mock\", \"evaluator\": \"mock\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 999999, \"max_requests_per_run\": 9999, \"max_tokens_per_task\": 10000, \"max_tokens_per_message\": 4000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 0, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"synthetic_v1\", \"train_size\": 30, \"validation_size\": 10, \"test_size\": 10, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": false, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": false, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/mock_experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": true}",
+      "created_at": "2026-08-16 15:17:31",
+      "dataset_name": "synthetic_v1",
+      "evaluator_model": null,
+      "experiment_id": "caps_synthetic_mock_Heuristic_42",
+      "id": 11,
+      "name": "caps_synthetic_mock / Heuristic",
+      "planner_model": "mock",
+      "policy_name": "Heuristic",
+      "receiver_model": "mock",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-16 15:17:32"
+    },
+    {
+      "completed_episodes": 50,
+      "config_yaml": "{\"name\": \"caps_synthetic_mock\", \"seed\": 42, \"seeds\": [42], \"temperature\": 0.0, \"models\": {\"planner\": \"mock\", \"receiver\": \"mock\", \"evaluator\": \"mock\"}, \"policy\": {\"algorithm\": \"linucb\", \"alpha\": 1.0, \"selection_strategy\": \"greedy_budget\", \"epsilon\": 0.1}, \"budget\": {\"max_daily_tokens\": 999999, \"max_requests_per_run\": 9999, \"max_tokens_per_task\": 10000, \"max_tokens_per_message\": 4000}, \"reward\": {\"lambda_cost\": 0.5, \"weights_tokens\": 0.4, \"weights_latency\": 0.2, \"weights_clarification\": 0.2, \"weights_retries\": 0.2}, \"evaluator\": {\"counterfactual\": false, \"max_counterfactuals_per_task\": 0, \"counterfactual_strategy\": \"uncertainty\", \"judge_enabled\": false}, \"dataset\": {\"name\": \"synthetic_v1\", \"train_size\": 30, \"validation_size\": 10, \"test_size\": 10, \"seed\": 42, \"families\": [\"debugging\", \"configuration\", \"data_transformation\", \"code_repair\", \"documentation\"]}, \"cache\": {\"enabled\": false, \"llm_cache_path\": \"data/llm_cache.db\", \"embedding_cache_path\": \"data/embedding_cache.db\"}, \"checkpoint\": {\"enabled\": false, \"every_n_episodes\": 10, \"directory\": \"experiments/checkpoints\"}, \"quota\": {\"warning_percent\": 20, \"auto_pause\": true}, \"database_path\": \"data/mock_experiments.db\", \"results_dir\": \"experiments/results\", \"embedding_model\": \"all-MiniLM-L6-v2\", \"verbose\": true}",
+      "created_at": "2026-08-16 15:17:32",
+      "dataset_name": "synthetic_v1",
+      "evaluator_model": null,
+      "experiment_id": "caps_synthetic_mock_CAPS_42",
+      "id": 12,
+      "name": "caps_synthetic_mock / CAPS",
+      "planner_model": "mock",
+      "policy_name": "CAPS",
+      "receiver_model": "mock",
+      "seed": 42,
+      "status": "completed",
+      "total_episodes": 50,
+      "updated_at": "2026-08-16 15:17:34"
+    }
+  ],
+  "metrics": [
+    {
+      "created_at": "2026-08-23 05:35:36",
+      "experiment_id": "caps_ark_CAPS_42",
+      "id": 194,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 06:10:49",
+      "experiment_id": "caps_ark_CAPS_42",
+      "id": 201,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 05:35:36",
+      "experiment_id": "caps_ark_CAPS_42",
+      "id": 191,
+      "metric_name": "mean_tokens",
+      "metric_value": 118.46
+    },
+    {
+      "created_at": "2026-08-23 06:10:49",
+      "experiment_id": "caps_ark_CAPS_42",
+      "id": 198,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 05:35:36",
+      "experiment_id": "caps_ark_CAPS_42",
+      "id": 192,
+      "metric_name": "median_tokens",
+      "metric_value": 121.0
+    },
+    {
+      "created_at": "2026-08-23 06:10:49",
+      "experiment_id": "caps_ark_CAPS_42",
+      "id": 199,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 05:35:36",
+      "experiment_id": "caps_ark_CAPS_42",
+      "id": 195,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 06:10:49",
+      "experiment_id": "caps_ark_CAPS_42",
+      "id": 202,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 05:35:36",
+      "experiment_id": "caps_ark_CAPS_42",
+      "id": 193,
+      "metric_name": "std_tokens",
+      "metric_value": 26.767861326598357
+    },
+    {
+      "created_at": "2026-08-23 06:10:49",
+      "experiment_id": "caps_ark_CAPS_42",
+      "id": 200,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 05:35:36",
+      "experiment_id": "caps_ark_CAPS_42",
+      "id": 190,
+      "metric_name": "success_rate",
+      "metric_value": 0.91
+    },
+    {
+      "created_at": "2026-08-23 06:10:49",
+      "experiment_id": "caps_ark_CAPS_42",
+      "id": 197,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 05:35:36",
+      "experiment_id": "caps_ark_CAPS_42",
+      "id": 196,
+      "metric_name": "total_episodes",
+      "metric_value": 200.0
+    },
+    {
+      "created_at": "2026-08-23 06:10:49",
+      "experiment_id": "caps_ark_CAPS_42",
+      "id": 203,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 08:21:33",
+      "experiment_id": "caps_ark_FullContext_42",
+      "id": 229,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.005
+    },
+    {
+      "created_at": "2026-08-23 08:21:33",
+      "experiment_id": "caps_ark_FullContext_42",
+      "id": 226,
+      "metric_name": "mean_tokens",
+      "metric_value": 118.46
+    },
+    {
+      "created_at": "2026-08-23 08:21:33",
+      "experiment_id": "caps_ark_FullContext_42",
+      "id": 227,
+      "metric_name": "median_tokens",
+      "metric_value": 121.0
+    },
+    {
+      "created_at": "2026-08-23 08:21:33",
+      "experiment_id": "caps_ark_FullContext_42",
+      "id": 230,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 08:21:33",
+      "experiment_id": "caps_ark_FullContext_42",
+      "id": 228,
+      "metric_name": "std_tokens",
+      "metric_value": 26.767861326598357
+    },
+    {
+      "created_at": "2026-08-23 08:21:33",
+      "experiment_id": "caps_ark_FullContext_42",
+      "id": 225,
+      "metric_name": "success_rate",
+      "metric_value": 0.92
+    },
+    {
+      "created_at": "2026-08-23 08:21:33",
+      "experiment_id": "caps_ark_FullContext_42",
+      "id": 231,
+      "metric_name": "total_episodes",
+      "metric_value": 200.0
+    },
+    {
+      "created_at": "2026-08-23 07:30:45",
+      "experiment_id": "caps_ark_Heuristic_42",
+      "id": 215,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 07:30:45",
+      "experiment_id": "caps_ark_Heuristic_42",
+      "id": 212,
+      "metric_name": "mean_tokens",
+      "metric_value": 118.46
+    },
+    {
+      "created_at": "2026-08-23 07:30:45",
+      "experiment_id": "caps_ark_Heuristic_42",
+      "id": 213,
+      "metric_name": "median_tokens",
+      "metric_value": 121.0
+    },
+    {
+      "created_at": "2026-08-23 07:30:45",
+      "experiment_id": "caps_ark_Heuristic_42",
+      "id": 216,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 07:30:45",
+      "experiment_id": "caps_ark_Heuristic_42",
+      "id": 214,
+      "metric_name": "std_tokens",
+      "metric_value": 26.767861326598357
+    },
+    {
+      "created_at": "2026-08-23 07:30:45",
+      "experiment_id": "caps_ark_Heuristic_42",
+      "id": 211,
+      "metric_name": "success_rate",
+      "metric_value": 0.94
+    },
+    {
+      "created_at": "2026-08-23 07:30:45",
+      "experiment_id": "caps_ark_Heuristic_42",
+      "id": 217,
+      "metric_name": "total_episodes",
+      "metric_value": 200.0
+    },
+    {
+      "created_at": "2026-08-23 07:05:21",
+      "experiment_id": "caps_ark_LLMPlanner_42",
+      "id": 208,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 07:05:21",
+      "experiment_id": "caps_ark_LLMPlanner_42",
+      "id": 205,
+      "metric_name": "mean_tokens",
+      "metric_value": 83.425
+    },
+    {
+      "created_at": "2026-08-23 07:05:21",
+      "experiment_id": "caps_ark_LLMPlanner_42",
+      "id": 206,
+      "metric_name": "median_tokens",
+      "metric_value": 77.0
+    },
+    {
+      "created_at": "2026-08-23 07:05:21",
+      "experiment_id": "caps_ark_LLMPlanner_42",
+      "id": 209,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 07:05:21",
+      "experiment_id": "caps_ark_LLMPlanner_42",
+      "id": 207,
+      "metric_name": "std_tokens",
+      "metric_value": 29.558490742932058
+    },
+    {
+      "created_at": "2026-08-23 07:05:21",
+      "experiment_id": "caps_ark_LLMPlanner_42",
+      "id": 204,
+      "metric_name": "success_rate",
+      "metric_value": 0.91
+    },
+    {
+      "created_at": "2026-08-23 07:05:21",
+      "experiment_id": "caps_ark_LLMPlanner_42",
+      "id": 210,
+      "metric_name": "total_episodes",
+      "metric_value": 200.0
+    },
+    {
+      "created_at": "2026-08-23 07:56:18",
+      "experiment_id": "caps_ark_Random_42",
+      "id": 222,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.01
+    },
+    {
+      "created_at": "2026-08-23 07:56:18",
+      "experiment_id": "caps_ark_Random_42",
+      "id": 219,
+      "metric_name": "mean_tokens",
+      "metric_value": 118.46
+    },
+    {
+      "created_at": "2026-08-23 07:56:18",
+      "experiment_id": "caps_ark_Random_42",
+      "id": 220,
+      "metric_name": "median_tokens",
+      "metric_value": 121.0
+    },
+    {
+      "created_at": "2026-08-23 07:56:18",
+      "experiment_id": "caps_ark_Random_42",
+      "id": 223,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 07:56:18",
+      "experiment_id": "caps_ark_Random_42",
+      "id": 221,
+      "metric_name": "std_tokens",
+      "metric_value": 26.767861326598357
+    },
+    {
+      "created_at": "2026-08-23 07:56:18",
+      "experiment_id": "caps_ark_Random_42",
+      "id": 218,
+      "metric_name": "success_rate",
+      "metric_value": 0.925
+    },
+    {
+      "created_at": "2026-08-23 07:56:18",
+      "experiment_id": "caps_ark_Random_42",
+      "id": 224,
+      "metric_name": "total_episodes",
+      "metric_value": 200.0
+    },
+    {
+      "created_at": "2026-08-23 05:01:23",
+      "experiment_id": "caps_experiment_CAPS_42",
+      "id": 180,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 05:08:14",
+      "experiment_id": "caps_experiment_CAPS_42",
+      "id": 187,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 05:01:23",
+      "experiment_id": "caps_experiment_CAPS_42",
+      "id": 177,
+      "metric_name": "mean_tokens",
+      "metric_value": 121.96551724137932
+    },
+    {
+      "created_at": "2026-08-23 05:08:14",
+      "experiment_id": "caps_experiment_CAPS_42",
+      "id": 184,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 05:01:23",
+      "experiment_id": "caps_experiment_CAPS_42",
+      "id": 178,
+      "metric_name": "median_tokens",
+      "metric_value": 122.0
+    },
+    {
+      "created_at": "2026-08-23 05:08:14",
+      "experiment_id": "caps_experiment_CAPS_42",
+      "id": 185,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 05:01:23",
+      "experiment_id": "caps_experiment_CAPS_42",
+      "id": 181,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 05:08:14",
+      "experiment_id": "caps_experiment_CAPS_42",
+      "id": 188,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 05:01:23",
+      "experiment_id": "caps_experiment_CAPS_42",
+      "id": 179,
+      "metric_name": "std_tokens",
+      "metric_value": 29.041566831746632
+    },
+    {
+      "created_at": "2026-08-23 05:08:14",
+      "experiment_id": "caps_experiment_CAPS_42",
+      "id": 186,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 05:01:23",
+      "experiment_id": "caps_experiment_CAPS_42",
+      "id": 176,
+      "metric_name": "success_rate",
+      "metric_value": 0.8620689655172413
+    },
+    {
+      "created_at": "2026-08-23 05:08:14",
+      "experiment_id": "caps_experiment_CAPS_42",
+      "id": 183,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 05:01:23",
+      "experiment_id": "caps_experiment_CAPS_42",
+      "id": 182,
+      "metric_name": "total_episodes",
+      "metric_value": 29.0
+    },
+    {
+      "created_at": "2026-08-23 05:08:14",
+      "experiment_id": "caps_experiment_CAPS_42",
+      "id": 189,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-22 08:33:54",
+      "experiment_id": "caps_swe_bench_v1_CAPS_42",
+      "id": 152,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-22 08:33:54",
+      "experiment_id": "caps_swe_bench_v1_CAPS_42",
+      "id": 149,
+      "metric_name": "mean_tokens",
+      "metric_value": 1652.1666666666667
+    },
+    {
+      "created_at": "2026-08-22 08:33:54",
+      "experiment_id": "caps_swe_bench_v1_CAPS_42",
+      "id": 150,
+      "metric_name": "median_tokens",
+      "metric_value": 1589.5
+    },
+    {
+      "created_at": "2026-08-22 08:33:54",
+      "experiment_id": "caps_swe_bench_v1_CAPS_42",
+      "id": 153,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-22 08:33:54",
+      "experiment_id": "caps_swe_bench_v1_CAPS_42",
+      "id": 151,
+      "metric_name": "std_tokens",
+      "metric_value": 545.9430424096963
+    },
+    {
+      "created_at": "2026-08-22 08:33:54",
+      "experiment_id": "caps_swe_bench_v1_CAPS_42",
+      "id": 148,
+      "metric_name": "success_rate",
+      "metric_value": 0.375
+    },
+    {
+      "created_at": "2026-08-22 08:33:54",
+      "experiment_id": "caps_swe_bench_v1_CAPS_42",
+      "id": 154,
+      "metric_name": "total_episodes",
+      "metric_value": 24.0
+    },
+    {
+      "created_at": "2026-08-22 13:18:39",
+      "experiment_id": "caps_swe_bench_v1_CAPS_43",
+      "id": 159,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-22 13:18:39",
+      "experiment_id": "caps_swe_bench_v1_CAPS_43",
+      "id": 156,
+      "metric_name": "mean_tokens",
+      "metric_value": 1655.0869565217392
+    },
+    {
+      "created_at": "2026-08-22 13:18:39",
+      "experiment_id": "caps_swe_bench_v1_CAPS_43",
+      "id": 157,
+      "metric_name": "median_tokens",
+      "metric_value": 1591.0
+    },
+    {
+      "created_at": "2026-08-22 13:18:39",
+      "experiment_id": "caps_swe_bench_v1_CAPS_43",
+      "id": 160,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-22 13:18:39",
+      "experiment_id": "caps_swe_bench_v1_CAPS_43",
+      "id": 158,
+      "metric_name": "std_tokens",
+      "metric_value": 557.5015627229786
+    },
+    {
+      "created_at": "2026-08-22 13:18:39",
+      "experiment_id": "caps_swe_bench_v1_CAPS_43",
+      "id": 155,
+      "metric_name": "success_rate",
+      "metric_value": 0.08695652173913043
+    },
+    {
+      "created_at": "2026-08-22 13:18:39",
+      "experiment_id": "caps_swe_bench_v1_CAPS_43",
+      "id": 161,
+      "metric_name": "total_episodes",
+      "metric_value": 23.0
+    },
+    {
+      "created_at": "2026-08-22 14:40:00",
+      "experiment_id": "caps_swe_bench_v1_CAPS_44",
+      "id": 166,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-22 14:40:00",
+      "experiment_id": "caps_swe_bench_v1_CAPS_44",
+      "id": 163,
+      "metric_name": "mean_tokens",
+      "metric_value": 1644.96
+    },
+    {
+      "created_at": "2026-08-22 14:40:00",
+      "experiment_id": "caps_swe_bench_v1_CAPS_44",
+      "id": 164,
+      "metric_name": "median_tokens",
+      "metric_value": 1589.5
+    },
+    {
+      "created_at": "2026-08-22 14:40:00",
+      "experiment_id": "caps_swe_bench_v1_CAPS_44",
+      "id": 167,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-22 14:40:00",
+      "experiment_id": "caps_swe_bench_v1_CAPS_44",
+      "id": 165,
+      "metric_name": "std_tokens",
+      "metric_value": 473.2671533077274
+    },
+    {
+      "created_at": "2026-08-22 14:40:00",
+      "experiment_id": "caps_swe_bench_v1_CAPS_44",
+      "id": 162,
+      "metric_name": "success_rate",
+      "metric_value": 0.04
+    },
+    {
+      "created_at": "2026-08-22 14:40:00",
+      "experiment_id": "caps_swe_bench_v1_CAPS_44",
+      "id": 168,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-22 15:22:44",
+      "experiment_id": "caps_swe_bench_v1_CAPS_47",
+      "id": 173,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.06
+    },
+    {
+      "created_at": "2026-08-22 15:22:44",
+      "experiment_id": "caps_swe_bench_v1_CAPS_47",
+      "id": 170,
+      "metric_name": "mean_tokens",
+      "metric_value": 596.64
+    },
+    {
+      "created_at": "2026-08-22 15:22:44",
+      "experiment_id": "caps_swe_bench_v1_CAPS_47",
+      "id": 171,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-22 15:22:44",
+      "experiment_id": "caps_swe_bench_v1_CAPS_47",
+      "id": 174,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-22 15:22:44",
+      "experiment_id": "caps_swe_bench_v1_CAPS_47",
+      "id": 172,
+      "metric_name": "std_tokens",
+      "metric_value": 746.3843449590834
+    },
+    {
+      "created_at": "2026-08-22 15:22:44",
+      "experiment_id": "caps_swe_bench_v1_CAPS_47",
+      "id": 169,
+      "metric_name": "success_rate",
+      "metric_value": 0.04
+    },
+    {
+      "created_at": "2026-08-22 15:22:44",
+      "experiment_id": "caps_swe_bench_v1_CAPS_47",
+      "id": 175,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-18 05:45:34",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 5,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.08695652173913043
+    },
+    {
+      "created_at": "2026-08-18 06:55:37",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 12,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 40,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 68,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 96,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 124,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:45:34",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 2,
+      "metric_name": "mean_tokens",
+      "metric_value": 1655.0869565217392
+    },
+    {
+      "created_at": "2026-08-18 06:55:37",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 9,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 37,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 65,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 93,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 121,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:45:34",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 3,
+      "metric_name": "median_tokens",
+      "metric_value": 1591.0
+    },
+    {
+      "created_at": "2026-08-18 06:55:37",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 10,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 38,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 66,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 94,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 122,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:45:34",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 6,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 06:55:37",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 13,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 41,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 69,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 97,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 125,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:45:34",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 4,
+      "metric_name": "std_tokens",
+      "metric_value": 557.5015627229786
+    },
+    {
+      "created_at": "2026-08-18 06:55:37",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 11,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 39,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 67,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 95,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 123,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:45:34",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 1,
+      "metric_name": "success_rate",
+      "metric_value": 0.08695652173913043
+    },
+    {
+      "created_at": "2026-08-18 06:55:36",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 8,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 36,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 64,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 92,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 120,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:45:34",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 7,
+      "metric_name": "total_episodes",
+      "metric_value": 23.0
+    },
+    {
+      "created_at": "2026-08-18 06:55:37",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 14,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 42,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 70,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 98,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "id": 126,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 07:26:26",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 26,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.02
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 54,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 82,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 110,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 138,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 07:26:26",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 23,
+      "metric_name": "mean_tokens",
+      "metric_value": 1644.96
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 51,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 79,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 107,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 135,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 07:26:26",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 24,
+      "metric_name": "median_tokens",
+      "metric_value": 1589.5
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 52,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 80,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 108,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 136,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 07:26:26",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 27,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 55,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 83,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 111,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 139,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 07:26:26",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 25,
+      "metric_name": "std_tokens",
+      "metric_value": 473.2671533077274
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 53,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 81,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 109,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 137,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 07:26:26",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 22,
+      "metric_name": "success_rate",
+      "metric_value": 0.06
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 50,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 78,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 106,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 134,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 07:26:26",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 28,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 56,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 84,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 112,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "id": 140,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 07:59:02",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 33,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.08
+    },
+    {
+      "created_at": "2026-08-18 09:36:20",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 61,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 89,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 117,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 145,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 07:59:02",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 30,
+      "metric_name": "mean_tokens",
+      "metric_value": 1633.36
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 58,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 86,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 114,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 142,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 07:59:02",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 31,
+      "metric_name": "median_tokens",
+      "metric_value": 1589.5
+    },
+    {
+      "created_at": "2026-08-18 09:36:20",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 59,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 87,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 115,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 143,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 07:59:02",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 34,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 09:36:20",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 62,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 90,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 118,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 146,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 07:59:02",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 32,
+      "metric_name": "std_tokens",
+      "metric_value": 472.93288149588415
+    },
+    {
+      "created_at": "2026-08-18 09:36:20",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 60,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 88,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 116,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 144,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 07:59:02",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 29,
+      "metric_name": "success_rate",
+      "metric_value": 0.5
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 57,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 85,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 113,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 141,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 07:59:02",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 35,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-18 09:36:20",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 63,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 91,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 119,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "id": 147,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 06:57:42",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 19,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 47,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 75,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 103,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 131,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 06:57:42",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 16,
+      "metric_name": "mean_tokens",
+      "metric_value": 1650.5
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 44,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 72,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 100,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 128,
+      "metric_name": "mean_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 06:57:42",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 17,
+      "metric_name": "median_tokens",
+      "metric_value": 1649.0
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 45,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 73,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 101,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 129,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 06:57:42",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 20,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 48,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 76,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 104,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 132,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 06:57:42",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 18,
+      "metric_name": "std_tokens",
+      "metric_value": 138.5812036316614
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 46,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 74,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 102,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 130,
+      "metric_name": "std_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 06:57:42",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 15,
+      "metric_name": "success_rate",
+      "metric_value": 0.25
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 43,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 71,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 99,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 127,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 06:57:42",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 21,
+      "metric_name": "total_episodes",
+      "metric_value": 4.0
+    },
+    {
+      "created_at": "2026-08-18 09:36:19",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 49,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 10:08:00",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 77,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-20 07:41:15",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 105,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-21 10:26:28",
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "id": 133,
+      "metric_name": "total_episodes",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 11:32:59",
+      "experiment_id": "caps_swe_bench_v2_CAPS_42",
+      "id": 236,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.24
+    },
+    {
+      "created_at": "2026-08-23 11:32:59",
+      "experiment_id": "caps_swe_bench_v2_CAPS_42",
+      "id": 233,
+      "metric_name": "mean_tokens",
+      "metric_value": 1162.04
+    },
+    {
+      "created_at": "2026-08-23 11:32:59",
+      "experiment_id": "caps_swe_bench_v2_CAPS_42",
+      "id": 234,
+      "metric_name": "median_tokens",
+      "metric_value": 1254.0
+    },
+    {
+      "created_at": "2026-08-23 11:32:59",
+      "experiment_id": "caps_swe_bench_v2_CAPS_42",
+      "id": 237,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 11:32:59",
+      "experiment_id": "caps_swe_bench_v2_CAPS_42",
+      "id": 235,
+      "metric_name": "std_tokens",
+      "metric_value": 675.2141278142809
+    },
+    {
+      "created_at": "2026-08-23 11:32:59",
+      "experiment_id": "caps_swe_bench_v2_CAPS_42",
+      "id": 232,
+      "metric_name": "success_rate",
+      "metric_value": 0.12
+    },
+    {
+      "created_at": "2026-08-23 11:32:59",
+      "experiment_id": "caps_swe_bench_v2_CAPS_42",
+      "id": 238,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-23 16:11:07",
+      "experiment_id": "caps_swe_bench_v2_FullContext_42",
+      "id": 264,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 16:11:07",
+      "experiment_id": "caps_swe_bench_v2_FullContext_42",
+      "id": 261,
+      "metric_name": "mean_tokens",
+      "metric_value": 1644.96
+    },
+    {
+      "created_at": "2026-08-23 16:11:07",
+      "experiment_id": "caps_swe_bench_v2_FullContext_42",
+      "id": 262,
+      "metric_name": "median_tokens",
+      "metric_value": 1589.5
+    },
+    {
+      "created_at": "2026-08-23 16:11:07",
+      "experiment_id": "caps_swe_bench_v2_FullContext_42",
+      "id": 265,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 16:11:07",
+      "experiment_id": "caps_swe_bench_v2_FullContext_42",
+      "id": 263,
+      "metric_name": "std_tokens",
+      "metric_value": 473.2671533077274
+    },
+    {
+      "created_at": "2026-08-23 16:11:07",
+      "experiment_id": "caps_swe_bench_v2_FullContext_42",
+      "id": 260,
+      "metric_name": "success_rate",
+      "metric_value": 0.94
+    },
+    {
+      "created_at": "2026-08-23 16:11:07",
+      "experiment_id": "caps_swe_bench_v2_FullContext_42",
+      "id": 266,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-23 14:16:11",
+      "experiment_id": "caps_swe_bench_v2_Heuristic_42",
+      "id": 250,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.1
+    },
+    {
+      "created_at": "2026-08-23 14:16:11",
+      "experiment_id": "caps_swe_bench_v2_Heuristic_42",
+      "id": 247,
+      "metric_name": "mean_tokens",
+      "metric_value": 1644.96
+    },
+    {
+      "created_at": "2026-08-23 14:16:11",
+      "experiment_id": "caps_swe_bench_v2_Heuristic_42",
+      "id": 248,
+      "metric_name": "median_tokens",
+      "metric_value": 1589.5
+    },
+    {
+      "created_at": "2026-08-23 14:16:11",
+      "experiment_id": "caps_swe_bench_v2_Heuristic_42",
+      "id": 251,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 14:16:11",
+      "experiment_id": "caps_swe_bench_v2_Heuristic_42",
+      "id": 249,
+      "metric_name": "std_tokens",
+      "metric_value": 473.2671533077274
+    },
+    {
+      "created_at": "2026-08-23 14:16:11",
+      "experiment_id": "caps_swe_bench_v2_Heuristic_42",
+      "id": 246,
+      "metric_name": "success_rate",
+      "metric_value": 0.14
+    },
+    {
+      "created_at": "2026-08-23 14:16:11",
+      "experiment_id": "caps_swe_bench_v2_Heuristic_42",
+      "id": 252,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-23 13:28:38",
+      "experiment_id": "caps_swe_bench_v2_LLMPlanner_42",
+      "id": 243,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.12
+    },
+    {
+      "created_at": "2026-08-23 13:28:38",
+      "experiment_id": "caps_swe_bench_v2_LLMPlanner_42",
+      "id": 240,
+      "metric_name": "mean_tokens",
+      "metric_value": 1624.96
+    },
+    {
+      "created_at": "2026-08-23 13:28:38",
+      "experiment_id": "caps_swe_bench_v2_LLMPlanner_42",
+      "id": 241,
+      "metric_name": "median_tokens",
+      "metric_value": 1569.5
+    },
+    {
+      "created_at": "2026-08-23 13:28:38",
+      "experiment_id": "caps_swe_bench_v2_LLMPlanner_42",
+      "id": 244,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 13:28:38",
+      "experiment_id": "caps_swe_bench_v2_LLMPlanner_42",
+      "id": 242,
+      "metric_name": "std_tokens",
+      "metric_value": 473.2671533077274
+    },
+    {
+      "created_at": "2026-08-23 13:28:38",
+      "experiment_id": "caps_swe_bench_v2_LLMPlanner_42",
+      "id": 239,
+      "metric_name": "success_rate",
+      "metric_value": 0.16
+    },
+    {
+      "created_at": "2026-08-23 13:28:38",
+      "experiment_id": "caps_swe_bench_v2_LLMPlanner_42",
+      "id": 245,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-23 15:42:27",
+      "experiment_id": "caps_swe_bench_v2_Random_42",
+      "id": 257,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.08
+    },
+    {
+      "created_at": "2026-08-23 15:42:27",
+      "experiment_id": "caps_swe_bench_v2_Random_42",
+      "id": 254,
+      "metric_name": "mean_tokens",
+      "metric_value": 1644.96
+    },
+    {
+      "created_at": "2026-08-23 15:42:27",
+      "experiment_id": "caps_swe_bench_v2_Random_42",
+      "id": 255,
+      "metric_name": "median_tokens",
+      "metric_value": 1589.5
+    },
+    {
+      "created_at": "2026-08-23 15:42:27",
+      "experiment_id": "caps_swe_bench_v2_Random_42",
+      "id": 258,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-23 15:42:27",
+      "experiment_id": "caps_swe_bench_v2_Random_42",
+      "id": 256,
+      "metric_name": "std_tokens",
+      "metric_value": 473.2671533077274
+    },
+    {
+      "created_at": "2026-08-23 15:42:27",
+      "experiment_id": "caps_swe_bench_v2_Random_42",
+      "id": 253,
+      "metric_name": "success_rate",
+      "metric_value": 0.5
+    },
+    {
+      "created_at": "2026-08-23 15:42:27",
+      "experiment_id": "caps_swe_bench_v2_Random_42",
+      "id": 259,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-24 12:42:42",
+      "experiment_id": "caps_swe_bench_v3_CAPS_42",
+      "id": 271,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-24 12:42:42",
+      "experiment_id": "caps_swe_bench_v3_CAPS_42",
+      "id": 268,
+      "metric_name": "mean_tokens",
+      "metric_value": 741.2
+    },
+    {
+      "created_at": "2026-08-24 12:42:42",
+      "experiment_id": "caps_swe_bench_v3_CAPS_42",
+      "id": 269,
+      "metric_name": "median_tokens",
+      "metric_value": 560.0
+    },
+    {
+      "created_at": "2026-08-24 12:42:42",
+      "experiment_id": "caps_swe_bench_v3_CAPS_42",
+      "id": 272,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-24 12:42:42",
+      "experiment_id": "caps_swe_bench_v3_CAPS_42",
+      "id": 270,
+      "metric_name": "std_tokens",
+      "metric_value": 754.7464209918454
+    },
+    {
+      "created_at": "2026-08-24 12:42:42",
+      "experiment_id": "caps_swe_bench_v3_CAPS_42",
+      "id": 267,
+      "metric_name": "success_rate",
+      "metric_value": 0.044444444444444446
+    },
+    {
+      "created_at": "2026-08-24 12:42:42",
+      "experiment_id": "caps_swe_bench_v3_CAPS_42",
+      "id": 273,
+      "metric_name": "total_episodes",
+      "metric_value": 45.0
+    },
+    {
+      "created_at": "2026-08-24 17:08:51",
+      "experiment_id": "caps_swe_bench_v3_FullContext_42",
+      "id": 299,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-24 17:08:51",
+      "experiment_id": "caps_swe_bench_v3_FullContext_42",
+      "id": 296,
+      "metric_name": "mean_tokens",
+      "metric_value": 1644.96
+    },
+    {
+      "created_at": "2026-08-24 17:08:51",
+      "experiment_id": "caps_swe_bench_v3_FullContext_42",
+      "id": 297,
+      "metric_name": "median_tokens",
+      "metric_value": 1589.5
+    },
+    {
+      "created_at": "2026-08-24 17:08:51",
+      "experiment_id": "caps_swe_bench_v3_FullContext_42",
+      "id": 300,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-24 17:08:51",
+      "experiment_id": "caps_swe_bench_v3_FullContext_42",
+      "id": 298,
+      "metric_name": "std_tokens",
+      "metric_value": 473.2671533077274
+    },
+    {
+      "created_at": "2026-08-24 17:08:51",
+      "experiment_id": "caps_swe_bench_v3_FullContext_42",
+      "id": 295,
+      "metric_name": "success_rate",
+      "metric_value": 0.02
+    },
+    {
+      "created_at": "2026-08-24 17:08:51",
+      "experiment_id": "caps_swe_bench_v3_FullContext_42",
+      "id": 301,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-24 15:01:36",
+      "experiment_id": "caps_swe_bench_v3_Heuristic_42",
+      "id": 285,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-24 15:01:36",
+      "experiment_id": "caps_swe_bench_v3_Heuristic_42",
+      "id": 282,
+      "metric_name": "mean_tokens",
+      "metric_value": 1644.96
+    },
+    {
+      "created_at": "2026-08-24 15:01:36",
+      "experiment_id": "caps_swe_bench_v3_Heuristic_42",
+      "id": 283,
+      "metric_name": "median_tokens",
+      "metric_value": 1589.5
+    },
+    {
+      "created_at": "2026-08-24 15:01:36",
+      "experiment_id": "caps_swe_bench_v3_Heuristic_42",
+      "id": 286,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-24 15:01:36",
+      "experiment_id": "caps_swe_bench_v3_Heuristic_42",
+      "id": 284,
+      "metric_name": "std_tokens",
+      "metric_value": 473.2671533077274
+    },
+    {
+      "created_at": "2026-08-24 15:01:36",
+      "experiment_id": "caps_swe_bench_v3_Heuristic_42",
+      "id": 281,
+      "metric_name": "success_rate",
+      "metric_value": 0.02
+    },
+    {
+      "created_at": "2026-08-24 15:01:36",
+      "experiment_id": "caps_swe_bench_v3_Heuristic_42",
+      "id": 287,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-24 13:45:49",
+      "experiment_id": "caps_swe_bench_v3_LLMPlanner_42",
+      "id": 278,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-24 13:45:49",
+      "experiment_id": "caps_swe_bench_v3_LLMPlanner_42",
+      "id": 275,
+      "metric_name": "mean_tokens",
+      "metric_value": 1642.96
+    },
+    {
+      "created_at": "2026-08-24 13:45:49",
+      "experiment_id": "caps_swe_bench_v3_LLMPlanner_42",
+      "id": 276,
+      "metric_name": "median_tokens",
+      "metric_value": 1589.5
+    },
+    {
+      "created_at": "2026-08-24 13:45:49",
+      "experiment_id": "caps_swe_bench_v3_LLMPlanner_42",
+      "id": 279,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-24 13:45:49",
+      "experiment_id": "caps_swe_bench_v3_LLMPlanner_42",
+      "id": 277,
+      "metric_name": "std_tokens",
+      "metric_value": 474.5086283725513
+    },
+    {
+      "created_at": "2026-08-24 13:45:49",
+      "experiment_id": "caps_swe_bench_v3_LLMPlanner_42",
+      "id": 274,
+      "metric_name": "success_rate",
+      "metric_value": 0.06
+    },
+    {
+      "created_at": "2026-08-24 13:45:49",
+      "experiment_id": "caps_swe_bench_v3_LLMPlanner_42",
+      "id": 280,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-24 16:13:01",
+      "experiment_id": "caps_swe_bench_v3_Random_42",
+      "id": 292,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-24 16:13:01",
+      "experiment_id": "caps_swe_bench_v3_Random_42",
+      "id": 289,
+      "metric_name": "mean_tokens",
+      "metric_value": 1644.96
+    },
+    {
+      "created_at": "2026-08-24 16:13:01",
+      "experiment_id": "caps_swe_bench_v3_Random_42",
+      "id": 290,
+      "metric_name": "median_tokens",
+      "metric_value": 1589.5
+    },
+    {
+      "created_at": "2026-08-24 16:13:01",
+      "experiment_id": "caps_swe_bench_v3_Random_42",
+      "id": 293,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-24 16:13:01",
+      "experiment_id": "caps_swe_bench_v3_Random_42",
+      "id": 291,
+      "metric_name": "std_tokens",
+      "metric_value": 473.2671533077274
+    },
+    {
+      "created_at": "2026-08-24 16:13:01",
+      "experiment_id": "caps_swe_bench_v3_Random_42",
+      "id": 288,
+      "metric_name": "success_rate",
+      "metric_value": 0.04
+    },
+    {
+      "created_at": "2026-08-24 16:13:01",
+      "experiment_id": "caps_swe_bench_v3_Random_42",
+      "id": 294,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-26 11:39:05",
+      "experiment_id": "caps_swe_bench_v3_full_dataset_CAPS_42",
+      "id": 306,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-26 11:39:05",
+      "experiment_id": "caps_swe_bench_v3_full_dataset_CAPS_42",
+      "id": 303,
+      "metric_name": "mean_tokens",
+      "metric_value": 225.84333333333333
+    },
+    {
+      "created_at": "2026-08-26 11:39:05",
+      "experiment_id": "caps_swe_bench_v3_full_dataset_CAPS_42",
+      "id": 304,
+      "metric_name": "median_tokens",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-26 11:39:05",
+      "experiment_id": "caps_swe_bench_v3_full_dataset_CAPS_42",
+      "id": 307,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-26 11:39:05",
+      "experiment_id": "caps_swe_bench_v3_full_dataset_CAPS_42",
+      "id": 305,
+      "metric_name": "std_tokens",
+      "metric_value": 597.8568547644903
+    },
+    {
+      "created_at": "2026-08-26 11:39:05",
+      "experiment_id": "caps_swe_bench_v3_full_dataset_CAPS_42",
+      "id": 302,
+      "metric_name": "success_rate",
+      "metric_value": 0.0033333333333333335
+    },
+    {
+      "created_at": "2026-08-26 11:39:05",
+      "experiment_id": "caps_swe_bench_v3_full_dataset_CAPS_42",
+      "id": 308,
+      "metric_name": "total_episodes",
+      "metric_value": 300.0
+    },
+    {
+      "created_at": "2026-08-18 05:04:17",
+      "experiment_id": "caps_synthetic_v1_CAPS_42",
+      "id": 33,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:04:17",
+      "experiment_id": "caps_synthetic_v1_CAPS_42",
+      "id": 30,
+      "metric_name": "mean_tokens",
+      "metric_value": 45.615
+    },
+    {
+      "created_at": "2026-08-18 05:04:17",
+      "experiment_id": "caps_synthetic_v1_CAPS_42",
+      "id": 31,
+      "metric_name": "median_tokens",
+      "metric_value": 47.0
+    },
+    {
+      "created_at": "2026-08-18 05:04:17",
+      "experiment_id": "caps_synthetic_v1_CAPS_42",
+      "id": 34,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:04:17",
+      "experiment_id": "caps_synthetic_v1_CAPS_42",
+      "id": 32,
+      "metric_name": "std_tokens",
+      "metric_value": 4.207941895986683
+    },
+    {
+      "created_at": "2026-08-18 05:04:17",
+      "experiment_id": "caps_synthetic_v1_CAPS_42",
+      "id": 29,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:04:17",
+      "experiment_id": "caps_synthetic_v1_CAPS_42",
+      "id": 35,
+      "metric_name": "total_episodes",
+      "metric_value": 200.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:12",
+      "experiment_id": "caps_synthetic_v1_FullContext_42",
+      "id": 5,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:12",
+      "experiment_id": "caps_synthetic_v1_FullContext_42",
+      "id": 2,
+      "metric_name": "mean_tokens",
+      "metric_value": 118.46
+    },
+    {
+      "created_at": "2026-08-18 05:03:12",
+      "experiment_id": "caps_synthetic_v1_FullContext_42",
+      "id": 3,
+      "metric_name": "median_tokens",
+      "metric_value": 121.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:12",
+      "experiment_id": "caps_synthetic_v1_FullContext_42",
+      "id": 6,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:12",
+      "experiment_id": "caps_synthetic_v1_FullContext_42",
+      "id": 4,
+      "metric_name": "std_tokens",
+      "metric_value": 26.767861326598357
+    },
+    {
+      "created_at": "2026-08-18 05:03:12",
+      "experiment_id": "caps_synthetic_v1_FullContext_42",
+      "id": 1,
+      "metric_name": "success_rate",
+      "metric_value": 0.385
+    },
+    {
+      "created_at": "2026-08-18 05:03:12",
+      "experiment_id": "caps_synthetic_v1_FullContext_42",
+      "id": 7,
+      "metric_name": "total_episodes",
+      "metric_value": 200.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:32",
+      "experiment_id": "caps_synthetic_v1_Heuristic_42",
+      "id": 19,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:32",
+      "experiment_id": "caps_synthetic_v1_Heuristic_42",
+      "id": 16,
+      "metric_name": "mean_tokens",
+      "metric_value": 44.78
+    },
+    {
+      "created_at": "2026-08-18 05:03:32",
+      "experiment_id": "caps_synthetic_v1_Heuristic_42",
+      "id": 17,
+      "metric_name": "median_tokens",
+      "metric_value": 47.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:32",
+      "experiment_id": "caps_synthetic_v1_Heuristic_42",
+      "id": 20,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:32",
+      "experiment_id": "caps_synthetic_v1_Heuristic_42",
+      "id": 18,
+      "metric_name": "std_tokens",
+      "metric_value": 5.686088286335344
+    },
+    {
+      "created_at": "2026-08-18 05:03:32",
+      "experiment_id": "caps_synthetic_v1_Heuristic_42",
+      "id": 15,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:32",
+      "experiment_id": "caps_synthetic_v1_Heuristic_42",
+      "id": 21,
+      "metric_name": "total_episodes",
+      "metric_value": 200.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:49",
+      "experiment_id": "caps_synthetic_v1_LLMPlanner_42",
+      "id": 26,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:49",
+      "experiment_id": "caps_synthetic_v1_LLMPlanner_42",
+      "id": 23,
+      "metric_name": "mean_tokens",
+      "metric_value": 45.49
+    },
+    {
+      "created_at": "2026-08-18 05:03:49",
+      "experiment_id": "caps_synthetic_v1_LLMPlanner_42",
+      "id": 24,
+      "metric_name": "median_tokens",
+      "metric_value": 47.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:49",
+      "experiment_id": "caps_synthetic_v1_LLMPlanner_42",
+      "id": 27,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:49",
+      "experiment_id": "caps_synthetic_v1_LLMPlanner_42",
+      "id": 25,
+      "metric_name": "std_tokens",
+      "metric_value": 4.822851853416192
+    },
+    {
+      "created_at": "2026-08-18 05:03:49",
+      "experiment_id": "caps_synthetic_v1_LLMPlanner_42",
+      "id": 22,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:49",
+      "experiment_id": "caps_synthetic_v1_LLMPlanner_42",
+      "id": 28,
+      "metric_name": "total_episodes",
+      "metric_value": 200.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:22",
+      "experiment_id": "caps_synthetic_v1_Random_42",
+      "id": 12,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:22",
+      "experiment_id": "caps_synthetic_v1_Random_42",
+      "id": 9,
+      "metric_name": "mean_tokens",
+      "metric_value": 44.99
+    },
+    {
+      "created_at": "2026-08-18 05:03:22",
+      "experiment_id": "caps_synthetic_v1_Random_42",
+      "id": 10,
+      "metric_name": "median_tokens",
+      "metric_value": 47.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:22",
+      "experiment_id": "caps_synthetic_v1_Random_42",
+      "id": 13,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:22",
+      "experiment_id": "caps_synthetic_v1_Random_42",
+      "id": 11,
+      "metric_name": "std_tokens",
+      "metric_value": 5.140029182796534
+    },
+    {
+      "created_at": "2026-08-18 05:03:22",
+      "experiment_id": "caps_synthetic_v1_Random_42",
+      "id": 8,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-18 05:03:22",
+      "experiment_id": "caps_synthetic_v1_Random_42",
+      "id": 14,
+      "metric_name": "total_episodes",
+      "metric_value": 200.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:34",
+      "experiment_id": "caps_synthetic_mock_CAPS_42",
+      "id": 82,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:34",
+      "experiment_id": "caps_synthetic_mock_CAPS_42",
+      "id": 79,
+      "metric_name": "mean_tokens",
+      "metric_value": 118.52
+    },
+    {
+      "created_at": "2026-08-16 15:17:34",
+      "experiment_id": "caps_synthetic_mock_CAPS_42",
+      "id": 80,
+      "metric_name": "median_tokens",
+      "metric_value": 121.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:34",
+      "experiment_id": "caps_synthetic_mock_CAPS_42",
+      "id": 83,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:34",
+      "experiment_id": "caps_synthetic_mock_CAPS_42",
+      "id": 81,
+      "metric_name": "std_tokens",
+      "metric_value": 26.65275970701721
+    },
+    {
+      "created_at": "2026-08-16 15:17:34",
+      "experiment_id": "caps_synthetic_mock_CAPS_42",
+      "id": 78,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:34",
+      "experiment_id": "caps_synthetic_mock_CAPS_42",
+      "id": 84,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:30",
+      "experiment_id": "caps_synthetic_mock_FullContext_42",
+      "id": 61,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:30",
+      "experiment_id": "caps_synthetic_mock_FullContext_42",
+      "id": 58,
+      "metric_name": "mean_tokens",
+      "metric_value": 118.52
+    },
+    {
+      "created_at": "2026-08-16 15:17:30",
+      "experiment_id": "caps_synthetic_mock_FullContext_42",
+      "id": 59,
+      "metric_name": "median_tokens",
+      "metric_value": 121.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:30",
+      "experiment_id": "caps_synthetic_mock_FullContext_42",
+      "id": 62,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:30",
+      "experiment_id": "caps_synthetic_mock_FullContext_42",
+      "id": 60,
+      "metric_name": "std_tokens",
+      "metric_value": 26.65275970701721
+    },
+    {
+      "created_at": "2026-08-16 15:17:30",
+      "experiment_id": "caps_synthetic_mock_FullContext_42",
+      "id": 57,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:30",
+      "experiment_id": "caps_synthetic_mock_FullContext_42",
+      "id": 63,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:32",
+      "experiment_id": "caps_synthetic_mock_Heuristic_42",
+      "id": 75,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:32",
+      "experiment_id": "caps_synthetic_mock_Heuristic_42",
+      "id": 72,
+      "metric_name": "mean_tokens",
+      "metric_value": 118.52
+    },
+    {
+      "created_at": "2026-08-16 15:17:32",
+      "experiment_id": "caps_synthetic_mock_Heuristic_42",
+      "id": 73,
+      "metric_name": "median_tokens",
+      "metric_value": 121.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:32",
+      "experiment_id": "caps_synthetic_mock_Heuristic_42",
+      "id": 76,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:32",
+      "experiment_id": "caps_synthetic_mock_Heuristic_42",
+      "id": 74,
+      "metric_name": "std_tokens",
+      "metric_value": 26.65275970701721
+    },
+    {
+      "created_at": "2026-08-16 15:17:32",
+      "experiment_id": "caps_synthetic_mock_Heuristic_42",
+      "id": 71,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:32",
+      "experiment_id": "caps_synthetic_mock_Heuristic_42",
+      "id": 77,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:31",
+      "experiment_id": "caps_synthetic_mock_Random_42",
+      "id": 68,
+      "metric_name": "clarification_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:31",
+      "experiment_id": "caps_synthetic_mock_Random_42",
+      "id": 65,
+      "metric_name": "mean_tokens",
+      "metric_value": 118.52
+    },
+    {
+      "created_at": "2026-08-16 15:17:31",
+      "experiment_id": "caps_synthetic_mock_Random_42",
+      "id": 66,
+      "metric_name": "median_tokens",
+      "metric_value": 121.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:31",
+      "experiment_id": "caps_synthetic_mock_Random_42",
+      "id": 69,
+      "metric_name": "retry_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:31",
+      "experiment_id": "caps_synthetic_mock_Random_42",
+      "id": 67,
+      "metric_name": "std_tokens",
+      "metric_value": 26.65275970701721
+    },
+    {
+      "created_at": "2026-08-16 15:17:31",
+      "experiment_id": "caps_synthetic_mock_Random_42",
+      "id": 64,
+      "metric_name": "success_rate",
+      "metric_value": 0.0
+    },
+    {
+      "created_at": "2026-08-16 15:17:31",
+      "experiment_id": "caps_synthetic_mock_Random_42",
+      "id": 70,
+      "metric_name": "total_episodes",
+      "metric_value": 50.0
+    }
+  ],
+  "models": [
+    "llama-3.3-70b-versatile",
+    "mock",
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b",
+    "stealth/ox-alpha"
+  ],
+  "project": "CAPS",
+  "results": [
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": 0.8519037147302627,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 200,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_ark_CAPS_42",
+      "failed_episodes": 18,
+      "mean_latency_ms": 7950.784406661987,
+      "mean_tokens": 118.46,
+      "median_latency_ms": 7707.304358482361,
+      "median_tokens": 121.0,
+      "receiver_status_counts": {
+        "success": 200
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 200,
+      "std_latency_ms": 3255.9025096471983,
+      "std_tokens": 26.767861326598357,
+      "successful_episodes": 182
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": 0.8635800587991079,
+      "clarification_rate": 0.005,
+      "clarification_turns": 1,
+      "completed_episodes": 200,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_ark_FullContext_42",
+      "failed_episodes": 16,
+      "mean_latency_ms": 7559.54118013382,
+      "mean_tokens": 118.46,
+      "median_latency_ms": 7629.05740737915,
+      "median_tokens": 121.0,
+      "receiver_status_counts": {
+        "needs_clarification": 1,
+        "success": 199
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 200,
+      "std_latency_ms": 1818.8479860070172,
+      "std_tokens": 26.767861326598357,
+      "successful_episodes": 184
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": 0.88403350045077,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 200,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_ark_Heuristic_42",
+      "failed_episodes": 12,
+      "mean_latency_ms": 7602.358740568161,
+      "mean_tokens": 118.46,
+      "median_latency_ms": 7349.736571311951,
+      "median_tokens": 121.0,
+      "receiver_status_counts": {
+        "success": 200
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 200,
+      "std_latency_ms": 3135.6073654244065,
+      "std_tokens": 26.767861326598357,
+      "successful_episodes": 188
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": 0.8371087262646357,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 200,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_ark_LLMPlanner_42",
+      "failed_episodes": 18,
+      "mean_latency_ms": 16331.189039945602,
+      "mean_tokens": 83.425,
+      "median_latency_ms": 10243.574380874634,
+      "median_tokens": 77.0,
+      "receiver_status_counts": {
+        "success": 200
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 200,
+      "std_latency_ms": 83582.30409268776,
+      "std_tokens": 29.558490742932054,
+      "successful_episodes": 182
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": 0.8681347889521916,
+      "clarification_rate": 0.01,
+      "clarification_turns": 2,
+      "completed_episodes": 200,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_ark_Random_42",
+      "failed_episodes": 15,
+      "mean_latency_ms": 7647.5189208984375,
+      "mean_tokens": 118.46,
+      "median_latency_ms": 7651.865482330322,
+      "median_tokens": 121.0,
+      "receiver_status_counts": {
+        "needs_clarification": 2,
+        "success": 198
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 200,
+      "std_latency_ms": 2286.151021120795,
+      "std_tokens": 26.767861326598357,
+      "successful_episodes": 185
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": 0.7562740016797384,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 200,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_experiment_CAPS_42",
+      "failed_episodes": 38,
+      "mean_latency_ms": 7211.4524137973785,
+      "mean_tokens": 118.46,
+      "median_latency_ms": 7404.78515625,
+      "median_tokens": 121.0,
+      "receiver_status_counts": {
+        "success": 200
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 200,
+      "std_latency_ms": 2548.9141044197227,
+      "std_tokens": 26.767861326598357,
+      "successful_episodes": 162
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": 0.3006175938176473,
+      "clarification_rate": 0.02,
+      "clarification_turns": 1,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v1_CAPS_42",
+      "failed_episodes": 27,
+      "mean_latency_ms": 68107.6663017273,
+      "mean_tokens": 1644.96,
+      "median_latency_ms": 23426.13136768341,
+      "median_tokens": 1589.5,
+      "receiver_status_counts": {
+        "failure": 2,
+        "needs_clarification": 1,
+        "success": 47
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 312649.61151444627,
+      "std_tokens": 473.2671533077274,
+      "successful_episodes": 23
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": 0.10257903504842121,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v1_CAPS_43",
+      "failed_episodes": 37,
+      "mean_latency_ms": 53004.349455833435,
+      "mean_tokens": 1644.96,
+      "median_latency_ms": 23966.686606407166,
+      "median_tokens": 1589.5,
+      "receiver_status_counts": {
+        "failure": 1,
+        "success": 49
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 131812.0257142004,
+      "std_tokens": 473.2671533077274,
+      "successful_episodes": 13
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.11876600959625244,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v1_CAPS_44",
+      "failed_episodes": 48,
+      "mean_latency_ms": 23646.175751686096,
+      "mean_tokens": 1644.96,
+      "median_latency_ms": 23142.45641231537,
+      "median_tokens": 1589.5,
+      "receiver_status_counts": {
+        "success": 50
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 10451.278627521035,
+      "std_tokens": 473.2671533077274,
+      "successful_episodes": 2
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.15989453314039442,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 9,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v1_CAPS_45",
+      "failed_episodes": 9,
+      "mean_latency_ms": 21622.824721866185,
+      "mean_tokens": 1699.5555555555557,
+      "median_latency_ms": 21080.30128479004,
+      "median_tokens": 1673.0,
+      "receiver_status_counts": {
+        "success": 9
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 9,
+      "std_latency_ms": 9127.93242885877,
+      "std_tokens": 290.772576695301,
+      "successful_episodes": 0
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.11860305143788656,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 25,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v1_CAPS_46",
+      "failed_episodes": 24,
+      "mean_latency_ms": 22661.188898086548,
+      "mean_tokens": 1647.28,
+      "median_latency_ms": 23611.274242401123,
+      "median_tokens": 1616.0,
+      "receiver_status_counts": {
+        "success": 25
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 25,
+      "std_latency_ms": 8893.2180833048,
+      "std_tokens": 399.55350280031337,
+      "successful_episodes": 1
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.06283524257558187,
+      "clarification_rate": 0.06,
+      "clarification_turns": 3,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v1_CAPS_47",
+      "failed_episodes": 48,
+      "mean_latency_ms": 15155.506911277771,
+      "mean_tokens": 596.64,
+      "median_latency_ms": 12324.16570186615,
+      "median_tokens": 0.0,
+      "receiver_status_counts": {
+        "needs_clarification": 3,
+        "success": 47
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 8500.796534702265,
+      "std_tokens": 746.3843449590834,
+      "successful_episodes": 2
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.07754823558654786,
+      "clarification_rate": 0.04,
+      "clarification_turns": 2,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v1_FullContext_42",
+      "failed_episodes": 48,
+      "mean_latency_ms": 12177.71701335907,
+      "mean_tokens": 1644.96,
+      "median_latency_ms": 2080.35147190094,
+      "median_tokens": 1589.5,
+      "receiver_status_counts": {
+        "failure": 2,
+        "needs_clarification": 2,
+        "success": 46
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 12795.630616149287,
+      "std_tokens": 473.2671533077274,
+      "successful_episodes": 2
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.1002108743461609,
+      "clarification_rate": 0.02,
+      "clarification_turns": 1,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v1_Heuristic_42",
+      "failed_episodes": 47,
+      "mean_latency_ms": 23394.864253997803,
+      "mean_tokens": 1644.96,
+      "median_latency_ms": 22643.03755760193,
+      "median_tokens": 1589.5,
+      "receiver_status_counts": {
+        "failure": 2,
+        "needs_clarification": 1,
+        "success": 47
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 10125.659752988971,
+      "std_tokens": 473.2671533077274,
+      "successful_episodes": 3
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": 0.3335205124717712,
+      "clarification_rate": 0.08,
+      "clarification_turns": 4,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v1_LLMPlanner_42",
+      "failed_episodes": 25,
+      "mean_latency_ms": 29427.543306350708,
+      "mean_tokens": 1633.36,
+      "median_latency_ms": 27876.679301261902,
+      "median_tokens": 1589.5,
+      "receiver_status_counts": {
+        "failure": 2,
+        "needs_clarification": 4,
+        "success": 44
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 8945.22051538158,
+      "std_tokens": 472.93288149588415,
+      "successful_episodes": 25
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": 0.620540012475586,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v1_Random_42",
+      "failed_episodes": 11,
+      "mean_latency_ms": 26945.150785446167,
+      "mean_tokens": 1644.96,
+      "median_latency_ms": 26457.261443138123,
+      "median_tokens": 1589.5,
+      "receiver_status_counts": {
+        "failure": 1,
+        "success": 49
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 11826.846460299914,
+      "std_tokens": 473.2671533077274,
+      "successful_episodes": 39
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.01100799589309694,
+      "clarification_rate": 0.24,
+      "clarification_turns": 12,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v2_CAPS_42",
+      "failed_episodes": 44,
+      "mean_latency_ms": 17440.112857818604,
+      "mean_tokens": 1162.04,
+      "median_latency_ms": 17039.420127868652,
+      "median_tokens": 1254.0,
+      "receiver_status_counts": {
+        "failure": 4,
+        "needs_clarification": 12,
+        "success": 34
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 10412.630002948632,
+      "std_tokens": 675.2141278142808,
+      "successful_episodes": 6
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": 0.7763982660181681,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v2_FullContext_42",
+      "failed_episodes": 3,
+      "mean_latency_ms": 28565.5868768692,
+      "mean_tokens": 1644.96,
+      "median_latency_ms": 28424.563884735107,
+      "median_tokens": 1589.5,
+      "receiver_status_counts": {
+        "failure": 2,
+        "success": 48
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 10577.33135602437,
+      "std_tokens": 473.2671533077274,
+      "successful_episodes": 47
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.021118553458913177,
+      "clarification_rate": 0.1,
+      "clarification_turns": 5,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v2_Heuristic_42",
+      "failed_episodes": 43,
+      "mean_latency_ms": 23091.56747817993,
+      "mean_tokens": 1644.96,
+      "median_latency_ms": 22959.08260345459,
+      "median_tokens": 1589.5,
+      "receiver_status_counts": {
+        "failure": 5,
+        "needs_clarification": 5,
+        "success": 40
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 9573.835539019703,
+      "std_tokens": 473.2671533077274,
+      "successful_episodes": 7
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.005966976145172129,
+      "clarification_rate": 0.12,
+      "clarification_turns": 6,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v2_LLMPlanner_42",
+      "failed_episodes": 42,
+      "mean_latency_ms": 80701.0229063034,
+      "mean_tokens": 1624.96,
+      "median_latency_ms": 26465.25526046753,
+      "median_tokens": 1569.5,
+      "receiver_status_counts": {
+        "failure": 4,
+        "needs_clarification": 6,
+        "success": 40
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 293575.8760076563,
+      "std_tokens": 473.2671533077274,
+      "successful_episodes": 8
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": 0.3450860062487284,
+      "clarification_rate": 0.08,
+      "clarification_turns": 4,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v2_Random_42",
+      "failed_episodes": 25,
+      "mean_latency_ms": 22721.304416656494,
+      "mean_tokens": 1644.96,
+      "median_latency_ms": 21948.62687587738,
+      "median_tokens": 1589.5,
+      "receiver_status_counts": {
+        "failure": 1,
+        "needs_clarification": 4,
+        "success": 45
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 12536.003493867925,
+      "std_tokens": 473.2671533077274,
+      "successful_episodes": 25
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.0865500199101766,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v3_CAPS_42",
+      "failed_episodes": 48,
+      "mean_latency_ms": 50901.748452186584,
+      "mean_tokens": 828.6,
+      "median_latency_ms": 55531.625151634216,
+      "median_tokens": 951.0,
+      "receiver_status_counts": {
+        "success": 50
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 17000.63581464139,
+      "std_tokens": 764.0944182494726,
+      "successful_episodes": 2
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.1457984,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v3_FullContext_42",
+      "failed_episodes": 49,
+      "mean_latency_ms": 56701.209235191345,
+      "mean_tokens": 1644.96,
+      "median_latency_ms": 55538.35928440094,
+      "median_tokens": 1589.5,
+      "receiver_status_counts": {
+        "success": 50
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 10313.20705490204,
+      "std_tokens": 473.2671533077274,
+      "successful_episodes": 1
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.1457984,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v3_Heuristic_42",
+      "failed_episodes": 49,
+      "mean_latency_ms": 67964.01155948639,
+      "mean_tokens": 1644.96,
+      "median_latency_ms": 60637.242436409,
+      "median_tokens": 1589.5,
+      "receiver_status_counts": {
+        "success": 50
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 27037.3779523737,
+      "std_tokens": 473.2671533077274,
+      "successful_episodes": 1
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.1057184,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v3_LLMPlanner_42",
+      "failed_episodes": 47,
+      "mean_latency_ms": 68168.71806621552,
+      "mean_tokens": 1642.96,
+      "median_latency_ms": 68047.7499961853,
+      "median_tokens": 1589.5,
+      "receiver_status_counts": {
+        "success": 50
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 11970.66982962344,
+      "std_tokens": 474.5086283725513,
+      "successful_episodes": 3
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.1257984,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 50,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v3_Random_42",
+      "failed_episodes": 48,
+      "mean_latency_ms": 66742.9224395752,
+      "mean_tokens": 1644.96,
+      "median_latency_ms": 60580.46078681946,
+      "median_tokens": 1589.5,
+      "receiver_status_counts": {
+        "success": 50
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 30536.531065463405,
+      "std_tokens": 473.2671533077274,
+      "successful_episodes": 2
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.10570040000000001,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 300,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v3_full_dataset_CAPS_42",
+      "failed_episodes": 299,
+      "mean_latency_ms": 64213.13449859619,
+      "mean_tokens": 225.84333333333333,
+      "median_latency_ms": 60433.29215049744,
+      "median_tokens": 0.0,
+      "receiver_status_counts": {
+        "success": 300
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 300,
+      "std_latency_ms": 23916.878257141674,
+      "std_tokens": 597.8568547644903,
+      "successful_episodes": 1
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.00985497818851472,
+      "clarification_rate": 0.0875,
+      "clarification_turns": 21,
+      "completed_episodes": 240,
+      "database": "data\\experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_swe_bench_v3_full_dataset_LLMPlanner_42",
+      "failed_episodes": 203,
+      "mean_latency_ms": 42875.29812455177,
+      "mean_tokens": 1590.0166666666667,
+      "median_latency_ms": 37958.7162733078,
+      "median_tokens": 1500.0,
+      "receiver_status_counts": {
+        "failure": 33,
+        "needs_clarification": 21,
+        "success": 186
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 240,
+      "std_latency_ms": 23632.884337221516,
+      "std_tokens": 414.7791276356878,
+      "successful_episodes": 37
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.005954953520456951,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 50,
+      "database": "data\\mock_experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_synthetic_mock_CAPS_42",
+      "failed_episodes": 50,
+      "mean_latency_ms": 4.3430280685424805,
+      "mean_tokens": 118.52,
+      "median_latency_ms": 3.4394264221191406,
+      "median_tokens": 121.0,
+      "receiver_status_counts": {
+        "success": 50
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 4.646001271452832,
+      "std_tokens": 26.652759707017207,
+      "successful_episodes": 0
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.0077275843391418466,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 50,
+      "database": "data\\mock_experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_synthetic_mock_FullContext_42",
+      "failed_episodes": 50,
+      "mean_latency_ms": 270.23765087127686,
+      "mean_tokens": 118.52,
+      "median_latency_ms": 1.16729736328125,
+      "median_tokens": 121.0,
+      "receiver_status_counts": {
+        "success": 50
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 1786.2065663086532,
+      "std_tokens": 26.652759707017207,
+      "successful_episodes": 0
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.005934757241566976,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 50,
+      "database": "data\\mock_experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_synthetic_mock_Heuristic_42",
+      "failed_episodes": 50,
+      "mean_latency_ms": 1.3135862350463867,
+      "mean_tokens": 118.52,
+      "median_latency_ms": 1.0148286819458008,
+      "median_tokens": 121.0,
+      "receiver_status_counts": {
+        "success": 50
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 0.5740910350639286,
+      "std_tokens": 26.652759707017207,
+      "successful_episodes": 0
+    },
+    {
+      "api_failures": "NOT RECORDED IN EPISODES",
+      "average_reward": -0.005936898621877035,
+      "clarification_rate": 0.0,
+      "clarification_turns": 0,
+      "completed_episodes": 50,
+      "database": "data\\mock_experiments.db",
+      "duplicate_episode_ids": 0,
+      "experiment_id": "caps_synthetic_mock_Random_42",
+      "failed_episodes": 50,
+      "mean_latency_ms": 1.6347932815551758,
+      "mean_tokens": 118.52,
+      "median_latency_ms": 1.9935369491577148,
+      "median_tokens": 121.0,
+      "receiver_status_counts": {
+        "success": 50
+      },
+      "retry_count": 0,
+      "retry_rate": 0.0,
+      "rows": 50,
+      "std_latency_ms": 0.6717070438686495,
+      "std_tokens": 26.652759707017207,
+      "successful_episodes": 0
+    }
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47
+  ]
+}

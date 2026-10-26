@@ -1,0 +1,47 @@
+# CAPS Synthetic Benchmark — Groq Live
+# Runs CAPS with real Groq API calls on the synthetic benchmark.
+
+name: caps_synthetic_v1
+seed: 42
+seeds: [42, 123, 456, 789]
+temperature: 0.0
+
+models:
+  planner: openai/gpt-oss-20b
+  receiver: openai/gpt-oss-20b
+  evaluator: openai/gpt-oss-20b
+
+policy:
+  algorithm: linucb
+  alpha: 1.0
+  selection_strategy: greedy_budget
+
+budget:
+  max_daily_tokens: 450000
+  max_requests_per_run: 500
+  max_tokens_per_task: 10000
+  max_tokens_per_message: 50
+
+reward:
+  lambda_cost: 0.5
+
+evaluator:
+  counterfactual: true
+  max_counterfactuals_per_task: 3
+
+dataset:
+  name: synthetic_v1
+  train_size: 100
+  validation_size: 50
+  test_size: 50
+  seed: 42
+
+cache:
+  enabled: true
+
+checkpoint:
+  enabled: true
+  every_n_episodes: 10
+
+database_path: data/experiments.db
+results_dir: experiments/results

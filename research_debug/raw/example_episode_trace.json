@@ -1,0 +1,79 @@
+{
+  "task_id": "synthetic_v2_debugging_easy_0000_s1",
+  "task": "Resolve the production failure in the request parser. Case 0.",
+  "answer_key": "parser_guard",
+  "answer_text": "The correct fix requires adding an empty-input guard before parsing.",
+  "num_available_cius": 7,
+  "selected_ciu_ids": [
+    "synthetic_v2_debugging_easy_0000_s1_ciu_02",
+    "synthetic_v2_debugging_easy_0000_s1_ciu_05",
+    "synthetic_v2_debugging_easy_0000_s1_ciu_03",
+    "synthetic_v2_debugging_easy_0000_s1_ciu_04",
+    "synthetic_v2_debugging_easy_0000_s1_ciu_06",
+    "synthetic_v2_debugging_easy_0000_s1_ciu_00",
+    "synthetic_v2_debugging_easy_0000_s1_ciu_01"
+  ],
+  "selected_count": 7,
+  "cius_sent_to_receiver": [
+    {
+      "id": "synthetic_v2_debugging_easy_0000_s1_ciu_02",
+      "type": "implementation_hint",
+      "content_preview": "Helpful implementation note for debugging: validate the final answer key parser_"
+    },
+    {
+      "id": "synthetic_v2_debugging_easy_0000_s1_ciu_05",
+      "type": "irrelevant_documentation",
+      "content_preview": "Unrelated background document about billing dashboards and office scheduling for"
+    },
+    {
+      "id": "synthetic_v2_debugging_easy_0000_s1_ciu_03",
+      "type": "redundant_context",
+      "content_preview": "Secondary note repeats known context about debugging without adding a new requir"
+    },
+    {
+      "id": "synthetic_v2_debugging_easy_0000_s1_ciu_04",
+      "type": "irrelevant_documentation",
+      "content_preview": "Unrelated background document about billing dashboards and office scheduling for"
+    },
+    {
+      "id": "synthetic_v2_debugging_easy_0000_s1_ciu_06",
+      "type": "outdated_or_conflicting_context",
+      "content_preview": "Archived note suggests an obsolete remediation for debugging; it conflicts with "
+    },
+    {
+      "id": "synthetic_v2_debugging_easy_0000_s1_ciu_00",
+      "type": "task_constraint",
+      "content_preview": "The correct fix requires adding an empty-input guard before parsing. Required ev"
+    },
+    {
+      "id": "synthetic_v2_debugging_easy_0000_s1_ciu_01",
+      "type": "task_constraint",
+      "content_preview": "The correct fix requires adding an empty-input guard before parsing. Required ev"
+    }
+  ],
+  "receiver_prompt_preview": "TASK:\nResolve the production failure in the request parser. Case 0.\n\nPROVIDED CONTEXT: [7 CIUs, total ~737 tokens]",
+  "dumb_mock": {
+    "raw_llm_response": "{\"status\": \"success\", \"answer\": \"\", \"used_ciu_ids\": [\"mock_value\"], \"missing_information\": [\"mock_value\"], \"confidence\": 0.5}",
+    "receiver_answer": "",
+    "receiver_status": "success",
+    "evaluator_expected": "parser_guard",
+    "evaluator_result": false,
+    "reward": -0.20002209981282554,
+    "root_cause": "mock LLM returns 'mock_value' \u2014 never matches answer_key"
+  },
+  "smart_mock": {
+    "raw_llm_response": "{\"status\": \"success\", \"answer\": \"The correct answer is parser_guard.\", \"used_ciu_ids\": [], \"missing_information\": [], \"confidence\": 0.9}",
+    "receiver_answer": "The correct answer is parser_guard.",
+    "receiver_status": "success",
+    "evaluator_result": true,
+    "root_cause_confirmed": "evaluator works correctly when answer is present"
+  },
+  "selection_quality": {
+    "precision": 0.42857142857142855,
+    "recall": 1.0,
+    "misleading_rate": 0.14285714285714285,
+    "compression": 1.0
+  },
+  "evaluator_can_return_true": true,
+  "hidden_fields_leaked": false
+}
